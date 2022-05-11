@@ -13,6 +13,8 @@
 		7451031B282C08B90022F444 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7451031A282C08B90022F444 /* Preview Assets.xcassets */; };
 		7451031D282C08B90022F444 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7451031C282C08B90022F444 /* Persistence.swift */; };
 		74510320282C08B90022F444 /* CClin_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7451031E282C08B90022F444 /* CClin_iOS.xcdatamodeld */; };
+		74510329282C0A320022F444 /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74510328282C0A320022F444 /* Color+hex.swift */; };
+		7451032B282C0A7A0022F444 /* SelectedTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7451032A282C0A7A0022F444 /* SelectedTab.swift */; };
 		ECFE46911D8E56447EF26F93 /* Pods_CClin_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9BD1C3073708F23F2D4FB2 /* Pods_CClin_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		7451031A282C08B90022F444 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7451031C282C08B90022F444 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7451031F282C08B90022F444 /* CClin_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CClin_iOS.xcdatamodel; sourceTree = "<group>"; };
+		74510328282C0A320022F444 /* Color+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
+		7451032A282C0A7A0022F444 /* SelectedTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTab.swift; sourceTree = "<group>"; };
 		C10F2192C0D7BB381CBC878A /* Pods-CClin_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CClin_iOS.debug.xcconfig"; path = "Target Support Files/Pods-CClin_iOS/Pods-CClin_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,7 +51,6 @@
 				C10F2192C0D7BB381CBC878A /* Pods-CClin_iOS.debug.xcconfig */,
 				2698935A07081062C0D7672D /* Pods-CClin_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,7 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				74510313282C08B70022F444 /* CClin_iOSApp.swift */,
-				74510315282C08B70022F444 /* ContentView.swift */,
+				74510326282C09D70022F444 /* View */,
+				74510327282C0A1D0022F444 /* Extension */,
 				74510317282C08B90022F444 /* Assets.xcassets */,
 				7451031C282C08B90022F444 /* Persistence.swift */,
 				7451031E282C08B90022F444 /* CClin_iOS.xcdatamodeld */,
@@ -88,6 +92,23 @@
 				7451031A282C08B90022F444 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		74510326282C09D70022F444 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74510315282C08B70022F444 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74510327282C0A1D0022F444 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				74510328282C0A320022F444 /* Color+hex.swift */,
+				7451032A282C0A7A0022F444 /* SelectedTab.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		C6FD2D499023DB2D54E6D3AD /* Frameworks */ = {
@@ -212,7 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7451032B282C0A7A0022F444 /* SelectedTab.swift in Sources */,
 				7451031D282C08B90022F444 /* Persistence.swift in Sources */,
+				74510329282C0A320022F444 /* Color+hex.swift in Sources */,
 				74510320282C08B90022F444 /* CClin_iOS.xcdatamodeld in Sources */,
 				74510316282C08B70022F444 /* ContentView.swift in Sources */,
 				74510314282C08B70022F444 /* CClin_iOSApp.swift in Sources */,
