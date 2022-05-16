@@ -13,7 +13,8 @@ struct CClin_iOSApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            LoginView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
