@@ -12,7 +12,7 @@ struct ContentView: View {
     @State var selectedTab: SelectedTab = SelectedTab.home
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             TabView {
                 ProgressView()
                     .tabItem {
@@ -35,7 +35,7 @@ struct ContentView: View {
                     }
                     .tag(SelectedTab.project)
                 
-                ProgressView()
+                SponsoredHomeView()
                     .tabItem {
                         Image("ic_affiliate")
                         Text("제휴협찬")
@@ -44,7 +44,7 @@ struct ContentView: View {
                 
             }
             .accentColor(Color(hex: "F27953"))
-        }
+//        }
     }
 }
 

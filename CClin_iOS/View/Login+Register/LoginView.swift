@@ -52,7 +52,8 @@ struct LoginView: View {
                 .padding(.bottom, 59)
                 
                 LargeButton(title: "로그인", backgroundColor: .main_club, foregroundColor: Color.white) {
-                    //
+                    
+                    UserLoginManager.shared.doLogin(id: idInput, password: passwordInput)
                 }
                 .frame(height: 55)
                 .padding(.bottom, 13)

@@ -17,7 +17,10 @@ enum terms: String, Hashable, CaseIterable  {
 struct ClubRegisterView1: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @State var circleNameInput: String = ""
+    
+    let userModel = UserModel.shared
+    
+    @State var clubNameInput: String = ""
     @State var idInput: String = ""
     @State var isAvailableId: Bool = false
     @State var passwordInput: String = ""
@@ -40,7 +43,7 @@ struct ClubRegisterView1: View {
                             .font(.system(size: 15))
                         Spacer()
                     }
-                    TextField("", text:$circleNameInput)
+                    TextField("", text:$clubNameInput)
                         .textFieldStyle(RoundTextFieldStyle(backgroundColor: Color.gray_bottom))
                 }
                 .padding(.bottom, 28)
@@ -204,7 +207,12 @@ struct ClubRegisterView1: View {
                 .padding(.bottom, 15)
                 
                 LargeButton(title: "다음으로", backgroundColor: satisfiedCondition() ? Color.main_club : Color.gray_bottom, foregroundColor: satisfiedCondition() ? Color.white : Color.gray_bottom_text) {
+                    
                     isClubRegisterView2Active = true
+                    
+                    userModel.id = idInput
+                    userModel.name = clubNameInput
+                    userModel.password = passwordInput
                 }
                 .frame(width: 329, height: 55, alignment: .center)
                 .disabled(!satisfiedCondition())
@@ -236,7 +244,7 @@ struct ClubRegisterView1: View {
     }
     
     func satisfiedCondition() -> Bool {
-        if circleNameInput == "" || idInput == "" ||  passwordInput == "" || passwordInput != checkPasswordInput || !term1 || !term2 {
+        if clubNameInput == "" || idInput == "" ||  passwordInput == "" || passwordInput != checkPasswordInput || !term1 || !term2 {
             return false
         }
         return true
