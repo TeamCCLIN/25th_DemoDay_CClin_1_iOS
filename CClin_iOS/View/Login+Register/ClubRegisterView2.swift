@@ -11,6 +11,8 @@ struct ClubRegisterView2: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
+    let userModel = UserModel.shared
+    
     @State var clubExplanation: String = ""
     @State var selectedCategory: SelectedCategory?
     @State var selectedCategoryEct: Bool = false
@@ -233,7 +235,17 @@ struct ClubRegisterView2: View {
                 
                 HStack {
                     LargeButton(title: "회원가입 하기", backgroundColor: satisfiedCondition() ? Color.main_club : Color.gray_bottom, foregroundColor: satisfiedCondition() ? Color.white : Color.gray_bottom_text) {
+                        
                         isApprovedViewActive = true
+                        
+                        userModel.description = clubExplanation
+                        userModel.category = selectedCategory
+                        userModel.foundYear = selectedYear
+                        userModel.area = selectedArea
+                        userModel.clubUrl = url
+                        
+                        UserLoginManager.shared.doServerRegister(userModel: userModel)
+                        
                     }
                     .frame(width: 329, height: 55, alignment: .center)
                     .disabled(!satisfiedCondition())
