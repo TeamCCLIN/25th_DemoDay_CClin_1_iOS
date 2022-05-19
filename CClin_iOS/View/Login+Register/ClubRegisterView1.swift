@@ -86,7 +86,7 @@ struct ClubRegisterView1: View {
                             .font(.system(size: 15))
                         Spacer()
                     }
-                    TextField("", text:$passwordInput)
+                    SecureField("", text:$passwordInput)
                         .textFieldStyle(RoundTextFieldStyle(backgroundColor: Color.gray_bottom))
                     
                     HStack {
@@ -106,7 +106,7 @@ struct ClubRegisterView1: View {
                             .font(.system(size: 15))
                         Spacer()
                     }
-                    TextField("", text:$checkPasswordInput)
+                    SecureField("", text:$checkPasswordInput)
                         .textFieldStyle(RoundTextFieldStyle(backgroundColor: Color.gray_bottom))
                     
                     HStack {
