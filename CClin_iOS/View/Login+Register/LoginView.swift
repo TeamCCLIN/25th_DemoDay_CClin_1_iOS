@@ -31,7 +31,7 @@ struct LoginView: View {
                     )
                     .padding(.bottom, 13)
                 
-                TextField("비밀번호", text: $passwordInput)
+                SecureField("비밀번호", text: $passwordInput)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 10)
                     .keyboardType(.default)

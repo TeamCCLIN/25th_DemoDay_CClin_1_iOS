@@ -37,6 +37,7 @@
 		74AB01672833F1C400996486 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB01662833F1C400996486 /* RegisterResponse.swift */; };
 		74AB01692833F3CB00996486 /* UserLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB01682833F3CB00996486 /* UserLoginManager.swift */; };
 		74AB016B2833F7B000996486 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB016A2833F7B000996486 /* LoginResponse.swift */; };
+		74B6BCAD28366D0F00168B31 /* RealmUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6BCAC28366D0F00168B31 /* RealmUserModel.swift */; };
 		ECFE46911D8E56447EF26F93 /* Pods_CClin_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9BD1C3073708F23F2D4FB2 /* Pods_CClin_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		74AB01662833F1C400996486 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		74AB01682833F3CB00996486 /* UserLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginManager.swift; sourceTree = "<group>"; };
 		74AB016A2833F7B000996486 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		74B6BCAC28366D0F00168B31 /* RealmUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserModel.swift; sourceTree = "<group>"; };
 		C10F2192C0D7BB381CBC878A /* Pods-CClin_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CClin_iOS.debug.xcconfig"; path = "Target Support Files/Pods-CClin_iOS/Pods-CClin_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +188,7 @@
 		7457C4A2282EA995008E7CA5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				74B6BCAB28366CF000168B31 /* Realm */,
 				74AB01642833F18200996486 /* Remote */,
 				74AB01542833D2D700996486 /* SponsoredModel */,
 				74AB01502833C5D300996486 /* RegisterModel */,
@@ -255,6 +258,14 @@
 				74AB016A2833F7B000996486 /* LoginResponse.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		74B6BCAB28366CF000168B31 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				74B6BCAC28366D0F00168B31 /* RealmUserModel.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		C6FD2D499023DB2D54E6D3AD /* Frameworks */ = {
@@ -399,6 +410,7 @@
 				74793E2E283292A5008CE9F3 /* SelectRegisterTypeView.swift in Sources */,
 				74510329282C0A320022F444 /* Color+hex.swift in Sources */,
 				74510320282C08B90022F444 /* CClin_iOS.xcdatamodeld in Sources */,
+				74B6BCAD28366D0F00168B31 /* RealmUserModel.swift in Sources */,
 				7457C49F282E6DE1008E7CA5 /* TermView.swift in Sources */,
 				74793E352833378F008CE9F3 /* SearchBar.swift in Sources */,
 				74510316282C08B70022F444 /* ContentView.swift in Sources */,

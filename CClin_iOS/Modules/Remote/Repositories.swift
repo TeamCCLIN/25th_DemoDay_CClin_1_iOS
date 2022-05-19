@@ -31,13 +31,13 @@ extension Repositories {
             }
     }
     
-    func login(id: String, password: String, completion: @escaping (HTTPStatusCode, LoginResponse?)->Void) {
+    func loginForAll(id: String, password: String, completion: @escaping (HTTPStatusCode, RegisterResponse?)->Void) {
         AF.request(
             baseUrl,
             method: .post,
             parameters: ["id": id, "password": password]
         )
-            .responseDecodable(of: LoginResponse.self) { response in
+            .responseDecodable(of: RegisterResponse.self) { response in
                 if let statusCode = response.response?.statusCode {
                     completion(HTTPStatusCode.init(rawValue: statusCode), response.value)
                 }
