@@ -26,7 +26,7 @@ struct LargeButtonStyle: ButtonStyle {
                 RoundedRectangle(cornerRadius: 7)
                     .stroke(backgroundColor, lineWidth: 0)
             )
-            .font(.system(size: 15))
+            .font(SpoqaHanSansNeo.bold(size: 15))
     }
 }
 
@@ -60,7 +60,7 @@ struct LargeButton: View {
             //            Spacer(minLength: LargeButton.buttonHorizontalMargins)
             Button(action:self.action) {
                 Text(self.title)
-                    .bold()
+                    .font(SpoqaHanSansNeo.regular(size: 15))
                     .padding(.vertical, 6)
                     .frame(maxWidth:.infinity)
             }

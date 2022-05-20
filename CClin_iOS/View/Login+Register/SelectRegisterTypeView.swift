@@ -29,9 +29,10 @@ struct SelectRegisterTypeView: View {
                 Text("지금 바로 가입해서")
                 Text("끌린 파트너가 되어주세요!")
             }
+            .font(SpoqaHanSansNeo.regular(size: 15))
             .padding(.bottom, 97)
             
-            LargeButton(title: "학생 단체로 회원가입 하기", backgroundColor: Color.main_club, foregroundColor: Color.white) {
+            LargeButton(title: "학생 단체로 회원가입 하기", backgroundColor: Color(hex: "FFDA00"), foregroundColor: Color.black) {
                 isClubRegisterView1Active = true
             }
             .frame(height: 55)
@@ -48,7 +49,7 @@ struct SelectRegisterTypeView: View {
                 //
             }
         }
-        .padding(.horizontal, 30)
+        .padding(.horizontal, 31)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: Button(action : {
             self.mode.wrappedValue.dismiss()

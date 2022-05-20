@@ -20,6 +20,7 @@ struct ClubRegisterView1: View {
     
     let userModel = UserModel.shared
     
+    @State var progressValue: Float = 0.0
     @State var clubNameInput: String = ""
     @State var idInput: String = ""
     @State var isAvailableId: Bool = false
@@ -36,11 +37,20 @@ struct ClubRegisterView1: View {
     var body: some View {
         ScrollView() {
             VStack {
+                HStack {
+                    Image("ic_progressbar")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height:16)
+                    
+                    ProgressBar(value: $progressValue).frame(height: 3)
+                }
+                .padding(.bottom, 25)
+                
                 VStack {
                     HStack {
                         Text("학생 단체 이름")
-                            .bold()
-                            .font(.system(size: 15))
+                            .font(SpoqaHanSansNeo.regular(size: 15))
                         Spacer()
                     }
                     TextField("", text:$clubNameInput)
@@ -51,8 +61,7 @@ struct ClubRegisterView1: View {
                 VStack {
                     HStack {
                         Text("아이디")
-                            .bold()
-                            .font(.system(size: 15))
+                            .font(SpoqaHanSansNeo.regular(size: 15))
                         Spacer()
                     }
                     HStack {
@@ -63,7 +72,7 @@ struct ClubRegisterView1: View {
                             isAvailableId = true
                         } label: {
                             Text("중복 확인")
-                                .font(.system(size: 12))
+                                .font(SpoqaHanSansNeo.medium(size: 12))
                         }
                         .foregroundColor(Color.black)
                         .padding(12)
@@ -72,7 +81,7 @@ struct ClubRegisterView1: View {
                     }
                     HStack {
                         Text(isAvailableId ? " 사용가능한 아이디입니다." : "")
-                            .font(.system(size: 10))
+                            .font(SpoqaHanSansNeo.regular(size: 10))
                             .foregroundColor(Color.main_club)
                         Spacer()
                     }
@@ -82,8 +91,7 @@ struct ClubRegisterView1: View {
                 VStack {
                     HStack {
                         Text("비밀번호")
-                            .bold()
-                            .font(.system(size: 15))
+                            .font(SpoqaHanSansNeo.regular(size: 15))
                         Spacer()
                     }
                     SecureField("", text:$passwordInput)
@@ -91,7 +99,7 @@ struct ClubRegisterView1: View {
                     
                     HStack {
                         Text("  영문 대/소문자, 숫자를 포함하고 8-12자로 입력해주세요.")
-                            .font(.system(size: 12))
+                            .font(SpoqaHanSansNeo.medium(size: 10))
                             .foregroundColor(Color.gray_text)
                         
                         Spacer()
@@ -102,8 +110,7 @@ struct ClubRegisterView1: View {
                 VStack {
                     HStack {
                         Text("비밀번호 확인")
-                            .bold()
-                            .font(.system(size: 15))
+                            .font(SpoqaHanSansNeo.regular(size: 15))
                         Spacer()
                     }
                     SecureField("", text:$checkPasswordInput)
@@ -111,7 +118,7 @@ struct ClubRegisterView1: View {
                     
                     HStack {
                         Text(passwordInput != checkPasswordInput ? "비밀번호가 일치하지 않습니다." : "")
-                            .font(.system(size: 10))
+                            .font(SpoqaHanSansNeo.regular(size: 10))
                             .foregroundColor(Color.main_club)
                         Spacer()
                     }
@@ -121,8 +128,7 @@ struct ClubRegisterView1: View {
                 VStack {
                     HStack {
                         Text("약관 동의")
-                            .bold()
-                            .font(.system(size: 15))
+                            .font(SpoqaHanSansNeo.regular(size: 15))
                         Spacer()
                     }
                     
@@ -145,7 +151,7 @@ struct ClubRegisterView1: View {
                                         .frame(width: 12, height: 18)
                                 }
                                 Text("전체 약관에 동의합니다.")
-                                    .font(.system(size: 11))
+                                    .font(SpoqaHanSansNeo.medium(size: 11))
                                     .foregroundColor(.black)
                             }
                         }
@@ -167,17 +173,17 @@ struct ClubRegisterView1: View {
                         HStack {
                             Toggle(isOn: $term1) {
                                 Text(terms.usingService.rawValue)
-                                    .font(.system(size: 11))
+                                    .font(SpoqaHanSansNeo.regular(size: 11))
                             }
                             .toggleStyle(CheckboxToggleStyle())
                             Spacer()
                         }
                         .padding(.bottom, 7)
-        
+                        
                         HStack {
                             Toggle(isOn: $term2) {
                                 Text(terms.privateInformation.rawValue)
-                                    .font(.system(size: 11))
+                                    .font(SpoqaHanSansNeo.regular(size: 11))
                             }
                             .toggleStyle(CheckboxToggleStyle())
                             Spacer()
@@ -187,7 +193,7 @@ struct ClubRegisterView1: View {
                         HStack {
                             Toggle(isOn: $term3) {
                                 Text(terms.eventAlarm.rawValue)
-                                    .font(.system(size: 11))
+                                    .font(SpoqaHanSansNeo.regular(size: 11))
                             }
                             .toggleStyle(CheckboxToggleStyle())
                             Spacer()
@@ -197,7 +203,7 @@ struct ClubRegisterView1: View {
                         HStack {
                             Toggle(isOn: $term4) {
                                 Text(terms.serviceAlarm.rawValue)
-                                    .font(.system(size: 11))
+                                    .font(SpoqaHanSansNeo.regular(size: 11))
                             }
                             .toggleStyle(CheckboxToggleStyle())
                             Spacer()
@@ -239,7 +245,10 @@ struct ClubRegisterView1: View {
                     Image(systemName: "chevron.backward")
                 })
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, 30)
+        }
+        .onAppear{
+            startProgressBar()
         }
     }
     
@@ -248,6 +257,12 @@ struct ClubRegisterView1: View {
             return false
         }
         return true
+    }
+    
+    func startProgressBar() {
+        for _ in 0...20 {
+                    self.progressValue += 0.015
+                }
     }
 }
 

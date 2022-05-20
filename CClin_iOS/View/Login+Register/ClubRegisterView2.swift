@@ -13,6 +13,7 @@ struct ClubRegisterView2: View {
     
     let userModel = UserModel.shared
     
+    @State var progressValue: Float = 0.3
     @State var clubExplanation: String = ""
     @State var selectedCategory: SelectedCategory?
     @State var selectedCategoryEct: Bool = false
@@ -35,11 +36,20 @@ struct ClubRegisterView2: View {
     var body: some View {
         ScrollView() {
             VStack {
+                HStack {
+                    Image("ic_progressbar")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height:16)
+                    
+                    ProgressBar(value: $progressValue).frame(height: 3)
+                }
+                .padding(.bottom, 25)
+                
                 VStack {
                     HStack {
                         Text("학생 단체 설명")
-                            .bold()
-                            .font(.system(size: 15))
+                            .font(SpoqaHanSansNeo.bold(size: 15))
                         Spacer()
                     }
                     ZStack(alignment: .top) {
@@ -65,8 +75,7 @@ struct ClubRegisterView2: View {
                 VStack {
                     HStack {
                         Text("단체 카테고리")
-                            .bold()
-                            .font(.system(size: 15))
+                            .font(SpoqaHanSansNeo.bold(size: 15))
                         Spacer()
                     }
                     
@@ -81,7 +90,7 @@ struct ClubRegisterView2: View {
                                         .foregroundColor(Color.main_club)
                                         .overlay(
                                             Text(category.rawValue)
-                                                .font(.system(size: 12))
+                                                .font(SpoqaHanSansNeo.medium(size: 12))
                                                 .foregroundColor(Color.white)
                                         )
                                 }
@@ -129,8 +138,7 @@ struct ClubRegisterView2: View {
                 VStack {
                     HStack {
                         Text("단체 설립연도")
-                            .bold()
-                            .font(.system(size: 15))
+                            .font(SpoqaHanSansNeo.bold(size: 15))
                         Spacer()
                     }
                     
@@ -144,19 +152,17 @@ struct ClubRegisterView2: View {
                             } label: {
                                 HStack {
                                     Text(selectedYear == 0 ? "연도 선택" : String(selectedYear))
-                                        .font(.system(size: 13))
+                                        .font(SpoqaHanSansNeo.medium(size: 11))
                                         .foregroundColor(Color.black)
-                                        .padding(.vertical, 7)
-                                        .padding(.trailing, 27)
-                                        .padding(.leading, 32)
                                    
                                     Image(systemName: "chevron.down")
                                         .resizable()
                                         .frame(width: 8, height: 5)
                                         .foregroundColor(Color.black)
-                                        .font(Font.system(size: 20, weight: .bold))
-                                        .padding(.trailing, 12)
+                                        .font(Font.system(size: 20))
                                 }
+                                .padding(.vertical, 7)
+                                .padding(.horizontal, 14)
                                 .background(Color(hex: "F3F3F3"))
                                 .cornerRadius(5)
                                 .overlay(
@@ -168,7 +174,7 @@ struct ClubRegisterView2: View {
                     }
                     HStack{
                       Text("1년 이상 활동한 단체만 가입 가능합니다.")
-                        .font(.system(size:10))
+                            .font(SpoqaHanSansNeo.bold(size: 10))
                         .foregroundColor(Color.main_club)
                         
                         Spacer()
@@ -179,8 +185,7 @@ struct ClubRegisterView2: View {
                 VStack {
                     HStack {
                         Text("활동 지역")
-                            .bold()
-                            .font(.system(size: 15))
+                            .font(SpoqaHanSansNeo.bold(size: 15))
                         Spacer()
                     }
                     
@@ -196,17 +201,15 @@ struct ClubRegisterView2: View {
                                     Text(selectedArea == "" ? "지역 선택" : selectedArea)
                                         .font(.system(size: 13))
                                         .foregroundColor(Color.black)
-                                        .padding(.vertical, 7)
-                                        .padding(.trailing, 27)
-                                        .padding(.leading, 32)
                                    
                                     Image(systemName: "chevron.down")
                                         .resizable()
                                         .frame(width: 8, height: 5)
                                         .foregroundColor(Color.black)
-                                        .font(Font.system(size: 20, weight: .bold))
-                                        .padding(.trailing, 12)
+                                        .font(Font.system(size: 20))
                                 }
+                                .padding(.vertical, 7)
+                                .padding(.horizontal, 14)
                                 .background(Color(hex: "F3F3F3"))
                                 .cornerRadius(5)
                                 .overlay(
@@ -222,8 +225,7 @@ struct ClubRegisterView2: View {
                 VStack {
                     HStack {
                         Text("단체 사이트 / 채널")
-                            .bold()
-                            .font(.system(size: 15))
+                            .font(SpoqaHanSansNeo.bold(size: 15))
                         Spacer()
                     }
                     
@@ -258,6 +260,7 @@ struct ClubRegisterView2: View {
                     )
                     
                 }
+                
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         Image("logo+name")
@@ -273,7 +276,10 @@ struct ClubRegisterView2: View {
                     Image(systemName: "chevron.backward")
                 })
             }
-            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+            .padding(.horizontal, 30)
+        }
+        .onAppear{
+            startProgressBar()
         }
     }
     
@@ -282,6 +288,12 @@ struct ClubRegisterView2: View {
             return false
         }
         return true
+    }
+    
+    func startProgressBar() {
+        for _ in 0...20 {
+                    self.progressValue += 0.015
+                }
     }
 }
 
