@@ -14,26 +14,30 @@ struct RegisterApprovedView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 170)
-                .padding(.top, 171)
-                .padding(.bottom, 16)
+                .padding(.top, 125)
+                .padding(.bottom, 27)
             
             VStack {
                 Text("회원가입을 축하드립니다.")
-                    .font(.system(size: 15))
+                    .font(SpoqaHanSansNeo.regular(size: 15))
                     .padding(.bottom, 11)
                 
                 Text("지금 바로 10명 이상의 단체 회원을 초대하고")
-                    .font(.system(size: 15))
+                    .font(SpoqaHanSansNeo.regular(size: 15))
                 Text("끌린을 시작해보세요")
-                        .font(.system(size: 15))
+                        .font(SpoqaHanSansNeo.regular(size: 15))
             }
+            
+            Spacer()
+                .frame(height: 39)
             
             VStack {
                 Text("10명 이상 초대 시, 회원가입이 완료됩니다.")
                     .foregroundColor(Color.main_club)
-                    .font(.system(size: 10))
+                    .font(SpoqaHanSansNeo.regular(size: 10))
+                    .padding(.bottom, 16)
                 
-                LargeButton(title: "카카오톡으로 초대장 보내기", backgroundColor: Color.main_club, foregroundColor: Color.white) {
+                LargeButton(title: "카카오톡으로 초대장 보내기", backgroundColor: Color(hex: "FFDA00"), foregroundColor: Color.black) {
                     //
                 }
                 .frame(height: 55, alignment: .center)
@@ -44,16 +48,8 @@ struct RegisterApprovedView: View {
                 .frame(height: 55, alignment: .center)
             }
             .padding(.top, 56)
-            
-            Spacer()
-            
-            LargeButton(title: "홈으로", backgroundColor: Color.main_club, foregroundColor: Color.white) {
-                //
-            }
-            .frame(height: 55)
-
         }
-        .padding(.horizontal, 30)
+        .padding(.horizontal, 31)
         .navigationBarHidden(true)
     }
 }

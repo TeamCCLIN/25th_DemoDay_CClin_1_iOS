@@ -38,6 +38,14 @@
 		74AB01692833F3CB00996486 /* UserLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB01682833F3CB00996486 /* UserLoginManager.swift */; };
 		74AB016B2833F7B000996486 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB016A2833F7B000996486 /* LoginResponse.swift */; };
 		74B6BCAD28366D0F00168B31 /* RealmUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6BCAC28366D0F00168B31 /* RealmUserModel.swift */; };
+		74B6BCAF283795EE00168B31 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6BCAE283795EE00168B31 /* ProgressBar.swift */; };
+		74B6BCB62837A25900168B31 /* SpoqaHanSansNeo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74B6BCB12837A25700168B31 /* SpoqaHanSansNeo-Bold.otf */; };
+		74B6BCB72837A25900168B31 /* SpoqaHanSansNeo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74B6BCB22837A25800168B31 /* SpoqaHanSansNeo-Light.otf */; };
+		74B6BCB82837A25900168B31 /* SpoqaHanSansNeo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74B6BCB32837A25800168B31 /* SpoqaHanSansNeo-Medium.otf */; };
+		74B6BCB92837A25900168B31 /* SpoqaHanSansNeo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74B6BCB42837A25900168B31 /* SpoqaHanSansNeo-Regular.otf */; };
+		74B6BCBA2837A25900168B31 /* SpoqaHanSansNeo-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74B6BCB52837A25900168B31 /* SpoqaHanSansNeo-Thin.otf */; };
+		74B6BCBD2837A50200168B31 /* Font+SpoqaHanSansNeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6BCBC2837A50200168B31 /* Font+SpoqaHanSansNeo.swift */; };
+		74B6BCC22837B2B100168B31 /* ClubMyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6BCC12837B2B100168B31 /* ClubMyPageView.swift */; };
 		ECFE46911D8E56447EF26F93 /* Pods_CClin_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9BD1C3073708F23F2D4FB2 /* Pods_CClin_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +84,15 @@
 		74AB01682833F3CB00996486 /* UserLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginManager.swift; sourceTree = "<group>"; };
 		74AB016A2833F7B000996486 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		74B6BCAC28366D0F00168B31 /* RealmUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserModel.swift; sourceTree = "<group>"; };
+		74B6BCAE283795EE00168B31 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		74B6BCB12837A25700168B31 /* SpoqaHanSansNeo-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Bold.otf"; sourceTree = "<group>"; };
+		74B6BCB22837A25800168B31 /* SpoqaHanSansNeo-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Light.otf"; sourceTree = "<group>"; };
+		74B6BCB32837A25800168B31 /* SpoqaHanSansNeo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.otf"; sourceTree = "<group>"; };
+		74B6BCB42837A25900168B31 /* SpoqaHanSansNeo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.otf"; sourceTree = "<group>"; };
+		74B6BCB52837A25900168B31 /* SpoqaHanSansNeo-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Thin.otf"; sourceTree = "<group>"; };
+		74B6BCBB2837A3A000168B31 /* CClin-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CClin-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		74B6BCBC2837A50200168B31 /* Font+SpoqaHanSansNeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+SpoqaHanSansNeo.swift"; sourceTree = "<group>"; };
+		74B6BCC12837B2B100168B31 /* ClubMyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubMyPageView.swift; sourceTree = "<group>"; };
 		C10F2192C0D7BB381CBC878A /* Pods-CClin_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CClin_iOS.debug.xcconfig"; path = "Target Support Files/Pods-CClin_iOS/Pods-CClin_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,11 +138,13 @@
 		74510312282C08B70022F444 /* CClin_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				74B6BCBB2837A3A000168B31 /* CClin-iOS-Info.plist */,
 				74510313282C08B70022F444 /* CClin_iOSApp.swift */,
 				74AB015C2833E35C00996486 /* Modules */,
 				7457C4A2282EA995008E7CA5 /* Model */,
 				74510326282C09D70022F444 /* View */,
 				74510327282C0A1D0022F444 /* Extension */,
+				74B6BCB02837A21700168B31 /* Font */,
 				74510317282C08B90022F444 /* Assets.xcassets */,
 				7451031C282C08B90022F444 /* Persistence.swift */,
 				7451031E282C08B90022F444 /* CClin_iOS.xcdatamodeld */,
@@ -146,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				74510315282C08B70022F444 /* ContentView.swift */,
+				74B6BCBE2837B1FC00168B31 /* MyPageView */,
 				74793E3128333103008CE9F3 /*  SponsoredView */,
 				7451032F282E4FFC0022F444 /* Component */,
 				7451032C282E4FDA0022F444 /* Login+Register */,
@@ -167,11 +187,11 @@
 			isa = PBXGroup;
 			children = (
 				7451032D282E4FEE0022F444 /* LoginView.swift */,
-				7457C498282E5158008E7CA5 /* ClubRegisterView1.swift */,
-				7457C49E282E6DE1008E7CA5 /* TermView.swift */,
-				7457C4A0282E989E008E7CA5 /* ClubRegisterView2.swift */,
 				74793E2D283292A5008CE9F3 /* SelectRegisterTypeView.swift */,
+				7457C498282E5158008E7CA5 /* ClubRegisterView1.swift */,
+				7457C4A0282E989E008E7CA5 /* ClubRegisterView2.swift */,
 				74793E2F283296C6008CE9F3 /* RegisterApprovedView.swift */,
+				7457C49E282E6DE1008E7CA5 /* TermView.swift */,
 			);
 			path = "Login+Register";
 			sourceTree = "<group>";
@@ -181,6 +201,7 @@
 			children = (
 				74510330282E50120022F444 /* LargeButton.swift */,
 				74793E342833378F008CE9F3 /* SearchBar.swift */,
+				74B6BCAE283795EE00168B31 /* ProgressBar.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -268,6 +289,43 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		74B6BCB02837A21700168B31 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				74B6BCB12837A25700168B31 /* SpoqaHanSansNeo-Bold.otf */,
+				74B6BCB22837A25800168B31 /* SpoqaHanSansNeo-Light.otf */,
+				74B6BCB32837A25800168B31 /* SpoqaHanSansNeo-Medium.otf */,
+				74B6BCB42837A25900168B31 /* SpoqaHanSansNeo-Regular.otf */,
+				74B6BCB52837A25900168B31 /* SpoqaHanSansNeo-Thin.otf */,
+				74B6BCBC2837A50200168B31 /* Font+SpoqaHanSansNeo.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		74B6BCBE2837B1FC00168B31 /* MyPageView */ = {
+			isa = PBXGroup;
+			children = (
+				74B6BCBF2837B20E00168B31 /* ClubMyPageView */,
+				74B6BCC02837B21E00168B31 /* CompanyMyPage */,
+			);
+			path = MyPageView;
+			sourceTree = "<group>";
+		};
+		74B6BCBF2837B20E00168B31 /* ClubMyPageView */ = {
+			isa = PBXGroup;
+			children = (
+				74B6BCC12837B2B100168B31 /* ClubMyPageView.swift */,
+			);
+			path = ClubMyPageView;
+			sourceTree = "<group>";
+		};
+		74B6BCC02837B21E00168B31 /* CompanyMyPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CompanyMyPage;
+			sourceTree = "<group>";
+		};
 		C6FD2D499023DB2D54E6D3AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,8 +394,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B6BCB62837A25900168B31 /* SpoqaHanSansNeo-Bold.otf in Resources */,
+				74B6BCB92837A25900168B31 /* SpoqaHanSansNeo-Regular.otf in Resources */,
 				7451031B282C08B90022F444 /* Preview Assets.xcassets in Resources */,
 				74510318282C08B90022F444 /* Assets.xcassets in Resources */,
+				74B6BCB82837A25900168B31 /* SpoqaHanSansNeo-Medium.otf in Resources */,
+				74B6BCB72837A25900168B31 /* SpoqaHanSansNeo-Light.otf in Resources */,
+				74B6BCBA2837A25900168B31 /* SpoqaHanSansNeo-Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +458,7 @@
 				7457C4A6282EBBBB008E7CA5 /* SelectedArea.swift in Sources */,
 				74793E332833313D008CE9F3 /* SponsoredHomeView.swift in Sources */,
 				74AB01692833F3CB00996486 /* UserLoginManager.swift in Sources */,
+				74B6BCBD2837A50200168B31 /* Font+SpoqaHanSansNeo.swift in Sources */,
 				7451032E282E4FEE0022F444 /* LoginView.swift in Sources */,
 				74AB016B2833F7B000996486 /* LoginResponse.swift in Sources */,
 				7457C499282E5158008E7CA5 /* ClubRegisterView1.swift in Sources */,
@@ -408,6 +472,7 @@
 				7457C49D282E5D1D008E7CA5 /* CheckboxToggleStyle.swift in Sources */,
 				74510331282E50120022F444 /* LargeButton.swift in Sources */,
 				74793E2E283292A5008CE9F3 /* SelectRegisterTypeView.swift in Sources */,
+				74B6BCC22837B2B100168B31 /* ClubMyPageView.swift in Sources */,
 				74510329282C0A320022F444 /* Color+hex.swift in Sources */,
 				74510320282C08B90022F444 /* CClin_iOS.xcdatamodeld in Sources */,
 				74B6BCAD28366D0F00168B31 /* RealmUserModel.swift in Sources */,
@@ -418,6 +483,7 @@
 				7457C49B282E51ED008E7CA5 /* RoundTextFieldStyle.swift in Sources */,
 				74AB015F2833EEE400996486 /* API.swift in Sources */,
 				74510314282C08B70022F444 /* CClin_iOSApp.swift in Sources */,
+				74B6BCAF283795EE00168B31 /* ProgressBar.swift in Sources */,
 				74AB01632833F11E00996486 /* HTTPStatusCode+Enum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +619,7 @@
 				DEVELOPMENT_TEAM = WYMZZ4Z5Z5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CClin-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -583,6 +650,7 @@
 				DEVELOPMENT_TEAM = WYMZZ4Z5Z5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CClin-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
