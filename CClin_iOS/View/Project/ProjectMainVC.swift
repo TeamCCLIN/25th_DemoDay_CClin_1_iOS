@@ -12,11 +12,28 @@ class ProjectMainVC: UIViewController {
     
     @IBOutlet weak var projectCollectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var verticalScrollView: UIScrollView!
     
     private var projectList : [ProjectDataModel] = []
     
     let projectDetailSB : UIStoryboard = UIStoryboard(name: "ProjectDetail", bundle: nil)
     
+    // MARK: - Lifecycle
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let xUnit = verticalScrollView.bounds.width
+        
+        verticalScrollView.contentSize.width = xUnit * 10
+        
+        for i in 0..<10 {
+            let newImageView = UIImageView()
+            newImageView.frame = CGRect(x: CGFloat(i) * xUnit, y: 0, width: xUnit, height: xUnit)
+            
+            newImageView.image = UIImage(named: "경제")
+            verticalScrollView.addSubview(newImageView)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

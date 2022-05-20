@@ -18,6 +18,9 @@
 		00B1EA43283762E900CA8B5E /* ProjectMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA42283762E900CA8B5E /* ProjectMainVC.swift */; };
 		00B1EA45283762EE00CA8B5E /* ProjectRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA44283762EE00CA8B5E /* ProjectRegisterVC.swift */; };
 		00B1EA472837631A00CA8B5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA462837631900CA8B5E /* SceneDelegate.swift */; };
+		00B1EA4A28376EF900CA8B5E /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA4928376EF900CA8B5E /* HorizontalScrollView.swift */; };
+		00B1EA4C283772DE00CA8B5E /* BaseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA4B283772DE00CA8B5E /* BaseScrollView.swift */; };
+		00B1EA4E283773EE00CA8B5E /* ProjectCategoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA4D283773EE00CA8B5E /* ProjectCategoryDataModel.swift */; };
 		74510314282C08B70022F444 /* CClin_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74510313282C08B70022F444 /* CClin_iOSApp.swift */; };
 		74510316282C08B70022F444 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74510315282C08B70022F444 /* ContentView.swift */; };
 		74510318282C08B90022F444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74510317282C08B90022F444 /* Assets.xcassets */; };
@@ -64,6 +67,9 @@
 		00B1EA42283762E900CA8B5E /* ProjectMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectMainVC.swift; sourceTree = "<group>"; };
 		00B1EA44283762EE00CA8B5E /* ProjectRegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectRegisterVC.swift; sourceTree = "<group>"; };
 		00B1EA462837631900CA8B5E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		00B1EA4928376EF900CA8B5E /* HorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
+		00B1EA4B283772DE00CA8B5E /* BaseScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScrollView.swift; sourceTree = "<group>"; };
+		00B1EA4D283773EE00CA8B5E /* ProjectCategoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCategoryDataModel.swift; sourceTree = "<group>"; };
 		2698935A07081062C0D7672D /* Pods-CClin_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CClin_iOS.release.xcconfig"; path = "Target Support Files/Pods-CClin_iOS/Pods-CClin_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4A9BD1C3073708F23F2D4FB2 /* Pods_CClin_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CClin_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74510310282C08B70022F444 /* CClin_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CClin_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				00B1EA352837628700CA8B5E /* ProjectDataModel.swift */,
+				00B1EA4D283773EE00CA8B5E /* ProjectCategoryDataModel.swift */,
 			);
 			path = ProjectModel;
 			sourceTree = "<group>";
@@ -165,6 +172,15 @@
 				00B1EA40283762E400CA8B5E /* ProjectDetailVC.swift */,
 			);
 			path = Project;
+			sourceTree = "<group>";
+		};
+		00B1EA4828376ED300CA8B5E /* ProjectCategory */ = {
+			isa = PBXGroup;
+			children = (
+				00B1EA4928376EF900CA8B5E /* HorizontalScrollView.swift */,
+				00B1EA4B283772DE00CA8B5E /* BaseScrollView.swift */,
+			);
+			path = ProjectCategory;
 			sourceTree = "<group>";
 		};
 		3792304E64557648338800C3 /* Pods */ = {
@@ -224,6 +240,7 @@
 		74510326282C09D70022F444 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				00B1EA4828376ED300CA8B5E /* ProjectCategory */,
 				00B1EA3F283762D900CA8B5E /* Project */,
 				74510315282C08B70022F444 /* ContentView.swift */,
 				74793E3128333103008CE9F3 /*  SponsoredView */,
@@ -486,6 +503,7 @@
 				7457C499282E5158008E7CA5 /* ClubRegisterView1.swift in Sources */,
 				74AB01612833F0F000996486 /* Repositories.swift in Sources */,
 				74793E30283296C6008CE9F3 /* RegisterApprovedView.swift in Sources */,
+				00B1EA4E283773EE00CA8B5E /* ProjectCategoryDataModel.swift in Sources */,
 				00B1EA472837631A00CA8B5E /* SceneDelegate.swift in Sources */,
 				74AB01562833D2EE00996486 /* SponsoredWritingModel.swift in Sources */,
 				74AB01672833F1C400996486 /* RegisterResponse.swift in Sources */,
@@ -493,6 +511,7 @@
 				7457C4A1282E989E008E7CA5 /* ClubRegisterView2.swift in Sources */,
 				7451031D282C08B90022F444 /* Persistence.swift in Sources */,
 				7457C49D282E5D1D008E7CA5 /* CheckboxToggleStyle.swift in Sources */,
+				00B1EA4A28376EF900CA8B5E /* HorizontalScrollView.swift in Sources */,
 				74510331282E50120022F444 /* LargeButton.swift in Sources */,
 				74793E2E283292A5008CE9F3 /* SelectRegisterTypeView.swift in Sources */,
 				74510329282C0A320022F444 /* Color+hex.swift in Sources */,
@@ -510,6 +529,7 @@
 				7457C49B282E51ED008E7CA5 /* RoundTextFieldStyle.swift in Sources */,
 				74AB015F2833EEE400996486 /* API.swift in Sources */,
 				74510314282C08B70022F444 /* CClin_iOSApp.swift in Sources */,
+				00B1EA4C283772DE00CA8B5E /* BaseScrollView.swift in Sources */,
 				74AB01632833F11E00996486 /* HTTPStatusCode+Enum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

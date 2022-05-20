@@ -12,5 +12,8 @@ target 'CClin_iOS' do
   
   # Alomofire
   pod 'Alamofire', '~> 5.5'
+  
+  # SnapKit
+  pod 'SnapKit', '~> 5.0.0'
 
 end

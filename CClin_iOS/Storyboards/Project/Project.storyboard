@@ -18,21 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="j2h-3u-HZk">
-                                <rect key="frame" x="20" y="170" width="374" height="68"/>
+                                <rect key="frame" x="20" y="170" width="374" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Atp-WS-i6w"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHj-T1-y3M">
-                                <rect key="frame" x="0.0" y="268" width="414" height="45"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="wbu-dH-mmh"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgA-h8-cjb">
-                                <rect key="frame" x="0.0" y="333" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="334" width="414" height="39"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 395건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cq-YK-Fxt">
-                                        <rect key="frame" x="20" y="10" width="54" height="18"/>
+                                        <rect key="frame" x="20" y="10" width="54" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                         <nil key="highlightedColor"/>
@@ -69,12 +65,21 @@
                                     <constraint firstItem="8cq-YK-Fxt" firstAttribute="leading" secondItem="PgA-h8-cjb" secondAttribute="leading" constant="20" id="tgC-9t-Sa1"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WR3-it-YUA">
-                                <rect key="frame" x="20" y="393" width="374" height="434"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PNi-Wg-xcI">
+                                <rect key="frame" x="0.0" y="245" width="414" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8U-PZ-bBY">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Mhj-e4-2VY"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="11T-RE-6pB"/>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WR3-it-YUA">
+                                <rect key="frame" x="20" y="393" width="374" height="410"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="fQ4-bi-iMe"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fvZ-9s-Gfq">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -96,26 +101,23 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PgA-h8-cjb" firstAttribute="top" secondItem="XHj-T1-y3M" secondAttribute="bottom" constant="20" id="831-Y0-fXG"/>
                             <constraint firstItem="j2h-3u-HZk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Bv9-QL-nS0"/>
                             <constraint firstItem="WR3-it-YUA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="GLL-Cy-96d"/>
-                            <constraint firstItem="XHj-T1-y3M" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="K9y-8v-s1l"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WR3-it-YUA" secondAttribute="bottom" constant="10" id="ImU-VF-QEK"/>
                             <constraint firstItem="PgA-h8-cjb" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="OUn-YB-vhB"/>
                             <constraint firstItem="PgA-h8-cjb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="RN4-a7-8Ns"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="PgA-h8-cjb" secondAttribute="bottom" constant="440" id="Uh1-J1-frf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WR3-it-YUA" secondAttribute="trailing" constant="20" id="VXa-xm-0Ih"/>
                             <constraint firstItem="WR3-it-YUA" firstAttribute="top" secondItem="PgA-h8-cjb" secondAttribute="bottom" constant="20" id="YF6-L2-xge"/>
-                            <constraint firstItem="XHj-T1-y3M" firstAttribute="top" secondItem="j2h-3u-HZk" secondAttribute="bottom" constant="30" id="aa7-6F-zMZ"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XHj-T1-y3M" secondAttribute="trailing" id="dMB-K6-6Ol"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="j2h-3u-HZk" secondAttribute="trailing" constant="20" id="g8A-am-iPL"/>
                             <constraint firstItem="j2h-3u-HZk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="pxC-US-klB"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XHj-T1-y3M" secondAttribute="bottom" constant="500" id="sXQ-DC-fTR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="프로젝트" id="cb9-fx-uGV"/>
                     <connections>
                         <outlet property="projectCollectionView" destination="WR3-it-YUA" id="6kp-8Q-zje"/>
                         <outlet property="searchBar" destination="j2h-3u-HZk" id="mHD-8n-CSG"/>
+                        <outlet property="verticalScrollView" destination="PNi-Wg-xcI" id="gLx-tR-hSD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
