@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0fR-yB-yeb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,27 +9,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CClin-->
+        <!--프로젝트-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="ProjectMainVC" id="Y6W-OH-hqX" customClass="ProjectMainVC" customModule="_5th_DemoDay_CClin_2_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectMainVC" id="Y6W-OH-hqX" customClass="ProjectMainVC" customModule="CClin_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로젝트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHv-la-Xzm">
-                                <rect key="frame" x="20" y="160" width="77" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="j2h-3u-HZk">
-                                <rect key="frame" x="20" y="202" width="374" height="51"/>
+                                <rect key="frame" x="20" y="170" width="374" height="68"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHj-T1-y3M">
-                                <rect key="frame" x="0.0" y="273" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="268" width="414" height="45"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="wbu-dH-mmh"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgA-h8-cjb">
                                 <rect key="frame" x="0.0" y="333" width="414" height="40"/>
@@ -73,8 +69,8 @@
                                     <constraint firstItem="8cq-YK-Fxt" firstAttribute="leading" secondItem="PgA-h8-cjb" secondAttribute="leading" constant="20" id="tgC-9t-Sa1"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WR3-it-YUA">
-                                <rect key="frame" x="20" y="393" width="374" height="100"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WR3-it-YUA">
+                                <rect key="frame" x="20" y="393" width="374" height="434"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="fQ4-bi-iMe"/>
@@ -86,7 +82,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProjectDetailCVC" id="Jpn-5P-3zj" customClass="ProjectDetailCVC" customModule="_5th_DemoDay_CClin_2_iOS" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProjectDetailCVC" id="Jpn-5P-3zj" customClass="ProjectDetailCVC" customModule="CClin_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iDw-Pq-zj4">
@@ -102,24 +98,21 @@
                         <constraints>
                             <constraint firstItem="PgA-h8-cjb" firstAttribute="top" secondItem="XHj-T1-y3M" secondAttribute="bottom" constant="20" id="831-Y0-fXG"/>
                             <constraint firstItem="j2h-3u-HZk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Bv9-QL-nS0"/>
-                            <constraint firstItem="AHv-la-Xzm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="CpJ-gN-2y4"/>
                             <constraint firstItem="WR3-it-YUA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="GLL-Cy-96d"/>
                             <constraint firstItem="XHj-T1-y3M" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="K9y-8v-s1l"/>
-                            <constraint firstItem="XHj-T1-y3M" firstAttribute="top" secondItem="j2h-3u-HZk" secondAttribute="bottom" constant="20" id="Kwn-jH-Aom"/>
-                            <constraint firstItem="j2h-3u-HZk" firstAttribute="top" secondItem="AHv-la-Xzm" secondAttribute="bottom" constant="15" id="MKU-m3-K6y"/>
                             <constraint firstItem="PgA-h8-cjb" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="OUn-YB-vhB"/>
                             <constraint firstItem="PgA-h8-cjb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="RN4-a7-8Ns"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="PgA-h8-cjb" secondAttribute="bottom" constant="440" id="Uh1-J1-frf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WR3-it-YUA" secondAttribute="trailing" constant="20" id="VXa-xm-0Ih"/>
                             <constraint firstItem="WR3-it-YUA" firstAttribute="top" secondItem="PgA-h8-cjb" secondAttribute="bottom" constant="20" id="YF6-L2-xge"/>
+                            <constraint firstItem="XHj-T1-y3M" firstAttribute="top" secondItem="j2h-3u-HZk" secondAttribute="bottom" constant="30" id="aa7-6F-zMZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XHj-T1-y3M" secondAttribute="trailing" id="dMB-K6-6Ol"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="j2h-3u-HZk" secondAttribute="trailing" constant="20" id="g8A-am-iPL"/>
-                            <constraint firstItem="AHv-la-Xzm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="o3w-nA-NUn"/>
+                            <constraint firstItem="j2h-3u-HZk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="pxC-US-klB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XHj-T1-y3M" secondAttribute="bottom" constant="500" id="sXQ-DC-fTR"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" title="CClin" id="cb9-fx-uGV"/>
+                    <navigationItem key="navigationItem" title="프로젝트" id="cb9-fx-uGV"/>
                     <connections>
                         <outlet property="projectCollectionView" destination="WR3-it-YUA" id="6kp-8Q-zje"/>
                         <outlet property="searchBar" destination="j2h-3u-HZk" id="mHD-8n-CSG"/>
