@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00B1EA2F2837625B00CA8B5E /* Project.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B1EA2E2837625A00CA8B5E /* Project.storyboard */; };
+		00B1EA312837626000CA8B5E /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B1EA302837626000CA8B5E /* ProjectDetail.storyboard */; };
+		00B1EA332837626600CA8B5E /* ProjectRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B1EA322837626600CA8B5E /* ProjectRegister.storyboard */; };
+		00B1EA362837628700CA8B5E /* ProjectDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA352837628700CA8B5E /* ProjectDataModel.swift */; };
+		00B1EA3A283762A900CA8B5E /* ProjectCategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA39283762A900CA8B5E /* ProjectCategoryCVC.swift */; };
+		00B1EA3C283762C000CA8B5E /* ProjectDetailCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B1EA3B283762C000CA8B5E /* ProjectDetailCVC.xib */; };
+		00B1EA3E283762C600CA8B5E /* ProjectDetailCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA3D283762C600CA8B5E /* ProjectDetailCVC.swift */; };
+		00B1EA41283762E400CA8B5E /* ProjectDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA40283762E400CA8B5E /* ProjectDetailVC.swift */; };
+		00B1EA43283762E900CA8B5E /* ProjectMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA42283762E900CA8B5E /* ProjectMainVC.swift */; };
+		00B1EA45283762EE00CA8B5E /* ProjectRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA44283762EE00CA8B5E /* ProjectRegisterVC.swift */; };
+		00B1EA472837631A00CA8B5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1EA462837631900CA8B5E /* SceneDelegate.swift */; };
 		74510314282C08B70022F444 /* CClin_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74510313282C08B70022F444 /* CClin_iOSApp.swift */; };
 		74510316282C08B70022F444 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74510315282C08B70022F444 /* ContentView.swift */; };
 		74510318282C08B90022F444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74510317282C08B90022F444 /* Assets.xcassets */; };
@@ -42,6 +53,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00B1EA2E2837625A00CA8B5E /* Project.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Project.storyboard; sourceTree = "<group>"; };
+		00B1EA302837626000CA8B5E /* ProjectDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectDetail.storyboard; sourceTree = "<group>"; };
+		00B1EA322837626600CA8B5E /* ProjectRegister.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectRegister.storyboard; sourceTree = "<group>"; };
+		00B1EA352837628700CA8B5E /* ProjectDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDataModel.swift; sourceTree = "<group>"; };
+		00B1EA39283762A900CA8B5E /* ProjectCategoryCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCategoryCVC.swift; sourceTree = "<group>"; };
+		00B1EA3B283762C000CA8B5E /* ProjectDetailCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectDetailCVC.xib; sourceTree = "<group>"; };
+		00B1EA3D283762C600CA8B5E /* ProjectDetailCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailCVC.swift; sourceTree = "<group>"; };
+		00B1EA40283762E400CA8B5E /* ProjectDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailVC.swift; sourceTree = "<group>"; };
+		00B1EA42283762E900CA8B5E /* ProjectMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectMainVC.swift; sourceTree = "<group>"; };
+		00B1EA44283762EE00CA8B5E /* ProjectRegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectRegisterVC.swift; sourceTree = "<group>"; };
+		00B1EA462837631900CA8B5E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2698935A07081062C0D7672D /* Pods-CClin_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CClin_iOS.release.xcconfig"; path = "Target Support Files/Pods-CClin_iOS/Pods-CClin_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4A9BD1C3073708F23F2D4FB2 /* Pods_CClin_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CClin_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74510310282C08B70022F444 /* CClin_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CClin_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +113,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00B1EA2C2837624000CA8B5E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				00B1EA2D2837625000CA8B5E /* Project */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		00B1EA2D2837625000CA8B5E /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				00B1EA2E2837625A00CA8B5E /* Project.storyboard */,
+				00B1EA302837626000CA8B5E /* ProjectDetail.storyboard */,
+				00B1EA322837626600CA8B5E /* ProjectRegister.storyboard */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		00B1EA342837627500CA8B5E /* ProjectModel */ = {
+			isa = PBXGroup;
+			children = (
+				00B1EA352837628700CA8B5E /* ProjectDataModel.swift */,
+			);
+			path = ProjectModel;
+			sourceTree = "<group>";
+		};
+		00B1EA372837629200CA8B5E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				00B1EA382837629F00CA8B5E /* Project */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		00B1EA382837629F00CA8B5E /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				00B1EA39283762A900CA8B5E /* ProjectCategoryCVC.swift */,
+				00B1EA3B283762C000CA8B5E /* ProjectDetailCVC.xib */,
+				00B1EA3D283762C600CA8B5E /* ProjectDetailCVC.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		00B1EA3F283762D900CA8B5E /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				00B1EA44283762EE00CA8B5E /* ProjectRegisterVC.swift */,
+				00B1EA42283762E900CA8B5E /* ProjectMainVC.swift */,
+				00B1EA40283762E400CA8B5E /* ProjectDetailVC.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
 		3792304E64557648338800C3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +197,9 @@
 		74510312282C08B70022F444 /* CClin_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				00B1EA462837631900CA8B5E /* SceneDelegate.swift */,
+				00B1EA372837629200CA8B5E /* Cells */,
+				00B1EA2C2837624000CA8B5E /* Storyboards */,
 				74510313282C08B70022F444 /* CClin_iOSApp.swift */,
 				74AB015C2833E35C00996486 /* Modules */,
 				7457C4A2282EA995008E7CA5 /* Model */,
@@ -145,6 +224,7 @@
 		74510326282C09D70022F444 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				00B1EA3F283762D900CA8B5E /* Project */,
 				74510315282C08B70022F444 /* ContentView.swift */,
 				74793E3128333103008CE9F3 /*  SponsoredView */,
 				7451032F282E4FFC0022F444 /* Component */,
@@ -188,6 +268,7 @@
 		7457C4A2282EA995008E7CA5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				00B1EA342837627500CA8B5E /* ProjectModel */,
 				74B6BCAB28366CF000168B31 /* Realm */,
 				74AB01642833F18200996486 /* Remote */,
 				74AB01542833D2D700996486 /* SponsoredModel */,
@@ -337,7 +418,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7451031B282C08B90022F444 /* Preview Assets.xcassets in Resources */,
+				00B1EA332837626600CA8B5E /* ProjectRegister.storyboard in Resources */,
+				00B1EA312837626000CA8B5E /* ProjectDetail.storyboard in Resources */,
+				00B1EA3C283762C000CA8B5E /* ProjectDetailCVC.xib in Resources */,
 				74510318282C08B90022F444 /* Assets.xcassets in Resources */,
+				00B1EA2F2837625B00CA8B5E /* Project.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,11 +480,13 @@
 				7457C4A6282EBBBB008E7CA5 /* SelectedArea.swift in Sources */,
 				74793E332833313D008CE9F3 /* SponsoredHomeView.swift in Sources */,
 				74AB01692833F3CB00996486 /* UserLoginManager.swift in Sources */,
+				00B1EA362837628700CA8B5E /* ProjectDataModel.swift in Sources */,
 				7451032E282E4FEE0022F444 /* LoginView.swift in Sources */,
 				74AB016B2833F7B000996486 /* LoginResponse.swift in Sources */,
 				7457C499282E5158008E7CA5 /* ClubRegisterView1.swift in Sources */,
 				74AB01612833F0F000996486 /* Repositories.swift in Sources */,
 				74793E30283296C6008CE9F3 /* RegisterApprovedView.swift in Sources */,
+				00B1EA472837631A00CA8B5E /* SceneDelegate.swift in Sources */,
 				74AB01562833D2EE00996486 /* SponsoredWritingModel.swift in Sources */,
 				74AB01672833F1C400996486 /* RegisterResponse.swift in Sources */,
 				74AB015B2833E04300996486 /* UserModel.swift in Sources */,
@@ -410,11 +497,16 @@
 				74793E2E283292A5008CE9F3 /* SelectRegisterTypeView.swift in Sources */,
 				74510329282C0A320022F444 /* Color+hex.swift in Sources */,
 				74510320282C08B90022F444 /* CClin_iOS.xcdatamodeld in Sources */,
+				00B1EA45283762EE00CA8B5E /* ProjectRegisterVC.swift in Sources */,
+				00B1EA41283762E400CA8B5E /* ProjectDetailVC.swift in Sources */,
 				74B6BCAD28366D0F00168B31 /* RealmUserModel.swift in Sources */,
 				7457C49F282E6DE1008E7CA5 /* TermView.swift in Sources */,
+				00B1EA3E283762C600CA8B5E /* ProjectDetailCVC.swift in Sources */,
 				74793E352833378F008CE9F3 /* SearchBar.swift in Sources */,
+				00B1EA3A283762A900CA8B5E /* ProjectCategoryCVC.swift in Sources */,
 				74510316282C08B70022F444 /* ContentView.swift in Sources */,
 				74AB014E2833BB1200996486 /* SponsoredRowView.swift in Sources */,
+				00B1EA43283762E900CA8B5E /* ProjectMainVC.swift in Sources */,
 				7457C49B282E51ED008E7CA5 /* RoundTextFieldStyle.swift in Sources */,
 				74AB015F2833EEE400996486 /* API.swift in Sources */,
 				74510314282C08B70022F444 /* CClin_iOSApp.swift in Sources */,
