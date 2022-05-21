@@ -1,13 +1,13 @@
 //
-//  ClubMyPageView.swift
+//  CompanyMyPageView.swift
 //  CClin_iOS
 //
-//  Created by 홍세은 on 2022/05/20.
+//  Created by 홍세은 on 2022/05/21.
 //
 
 import SwiftUI
 
-struct ClubMyPageView: View {
+struct CompanyMyPageView: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
@@ -25,9 +25,9 @@ struct ClubMyPageView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("IT/기술 | 회원 10명")
                             .font(SpoqaHanSansNeo.medium(size: 10))
-                        Text("원큐")
+                        Text("고퀄")
                             .font(SpoqaHanSansNeo.bold(size: 30))
-                        Text("서비스 끌린을 만드는 팀 원큐입니다.")
+                        Text("누구나 쉽게 스마트홈을 누릴 수 있도록 스마트홈 IoT의 대중화를 이끄는 스타트업")
                             .font(SpoqaHanSansNeo.medium(size: 10))
                     }
                 }
@@ -36,81 +36,96 @@ struct ClubMyPageView: View {
                 .background(Color.gray_bottom)
                 .cornerRadius(7)
                 
-                HStack(spacing:16) {
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(Color.main_club)
-                    
-                    Text("찜한 목록")
-                        .font(SpoqaHanSansNeo.medium(size: 10))
-                    
-                    Spacer()
-                }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.gray_bottom)
-                .cornerRadius(7)
-                
-                VStack {
-                HStack(spacing:16) {
-                    Image("ic_project")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 15)
+                Button {
+                    //
+                } label: {
+                    HStack(spacing:16) {
+                        Image(systemName: "heart.fill")
+                            .foregroundColor(Color.main_club)
                         
-                    Text("나의 프로젝트")
-                        .font(SpoqaHanSansNeo.medium(size: 10))
-                    
-                    Spacer()
-                }
-                    HStack(spacing:51) {
-                        VStack {
-                            Image("ic_waiting")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(height:27)
-                            
-                            Text("선정 대기")
-                                .font(SpoqaHanSansNeo.regular(size: 12))
-                                .foregroundColor(Color.gray_text)
-                            
-                            Text("1")
-                                .font(SpoqaHanSansNeo.bold(size: 12))
-                        }
+                        Text("찜한 목록")
+                            .font(SpoqaHanSansNeo.medium(size: 10))
+                            .foregroundColor(Color.black)
                         
-                        VStack {
-                            Image("ic_proceeding")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(height:27)
-                            
-                            Text("진행중")
-                                .font(SpoqaHanSansNeo.regular(size: 12))
-                                .foregroundColor(Color.gray_text)
-                            
-                            Text("0")
-                                .font(SpoqaHanSansNeo.bold(size: 12))
-                        }
-                        
-                        VStack {
-                            Image("ic_complete")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(height:27)
-                            
-                            Text("진행완료")
-                                .font(SpoqaHanSansNeo.regular(size: 12))
-                                .foregroundColor(Color.gray_text)
-                            
-                            Text("0")
-                                .font(SpoqaHanSansNeo.bold(size: 12))
-                        }
+                        Spacer()
                     }
                     .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.gray_bottom)
+                    .cornerRadius(7)
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.gray_bottom)
-                .cornerRadius(7)
+
+                
+                Button {
+                    //
+                } label: {
+                    VStack {
+                    HStack(spacing:16) {
+                        Image("ic_project")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 15)
+                            
+                        Text("나의 프로젝트")
+                            .font(SpoqaHanSansNeo.medium(size: 10))
+                            .foregroundColor(Color.black)
+                        
+                        Spacer()
+                    }
+                        HStack(spacing:51) {
+                            VStack {
+                                Image("ic_waiting")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height:27)
+                                
+                                Text("선정 대기")
+                                    .font(SpoqaHanSansNeo.regular(size: 12))
+                                    .foregroundColor(Color.gray_text)
+                                
+                                Text("1")
+                                    .font(SpoqaHanSansNeo.bold(size: 12))
+                                    .foregroundColor(Color.black)
+                            }
+                            
+                            VStack {
+                                Image("ic_proceeding")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height:27)
+                                
+                                Text("진행중")
+                                    .font(SpoqaHanSansNeo.regular(size: 12))
+                                    .foregroundColor(Color.gray_text)
+                                
+                                Text("0")
+                                    .font(SpoqaHanSansNeo.bold(size: 12))
+                                    .foregroundColor(Color.black)
+                            }
+                            
+                            VStack {
+                                Image("ic_complete")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height:27)
+                                
+                                Text("진행완료")
+                                    .font(SpoqaHanSansNeo.regular(size: 12))
+                                    .foregroundColor(Color.gray_text)
+                                
+                                Text("0")
+                                    .font(SpoqaHanSansNeo.bold(size: 12))
+                                    .foregroundColor(Color.black)
+                            }
+                        }
+                        .padding()
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.gray_bottom)
+                    .cornerRadius(7)
+                }
+
                 
                 HStack(spacing:16) {
                     Image("ic_questions")
@@ -203,8 +218,8 @@ struct ClubMyPageView: View {
         }
     }
 
-struct ClubMyPageView_Previews: PreviewProvider {
+struct CompanyMyPageView_Previews: PreviewProvider {
     static var previews: some View {
-        ClubMyPageView()
+        CompanyMyPageView()
     }
 }
