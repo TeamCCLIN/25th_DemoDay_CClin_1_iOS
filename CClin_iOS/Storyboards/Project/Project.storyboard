@@ -78,7 +78,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="11T-RE-6pB"/>
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WR3-it-YUA">
-                                <rect key="frame" x="20" y="393" width="374" height="410"/>
+                                <rect key="frame" x="20" y="393" width="374" height="420"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fvZ-9s-Gfq">
                                     <size key="itemSize" width="128" height="128"/>
@@ -103,7 +103,7 @@
                         <constraints>
                             <constraint firstItem="j2h-3u-HZk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Bv9-QL-nS0"/>
                             <constraint firstItem="WR3-it-YUA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="GLL-Cy-96d"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WR3-it-YUA" secondAttribute="bottom" constant="10" id="ImU-VF-QEK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WR3-it-YUA" secondAttribute="bottom" id="ImU-VF-QEK"/>
                             <constraint firstItem="PgA-h8-cjb" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="OUn-YB-vhB"/>
                             <constraint firstItem="PgA-h8-cjb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="RN4-a7-8Ns"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="PgA-h8-cjb" secondAttribute="bottom" constant="440" id="Uh1-J1-frf"/>
