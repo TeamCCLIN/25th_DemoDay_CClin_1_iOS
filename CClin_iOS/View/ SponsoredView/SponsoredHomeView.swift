@@ -13,6 +13,7 @@ struct SponsoredHomeView: View {
     @State var showLatestOrder: Bool = true
     @State var showPopularityOrder: Bool = false
     @State var showDeadlineOrder: Bool = false
+    @State var isMyPageViewActive: Bool = false
     
     var body: some View {
         NavigationView {
@@ -127,26 +128,32 @@ struct SponsoredHomeView: View {
                 }
                 .padding(.horizontal, 10)
                 .listStyle(.plain)
-                
-                
+        
             }
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Text("제휴/협찬")
                         .foregroundColor(Color.black)
-                        .bold()
-                        .font(.system(size: 20))
+                        .font(SpoqaHanSansNeo.bold(size: 20))
                         .padding(.leading, 15)
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        //
+                        isMyPageViewActive = true
                     } label: {
                         Image(systemName: "person.crop.circle")
                             .padding(.trailing, 15)
                     }
+                    .background(
+                        NavigationLink(isActive: $isMyPageViewActive, destination: {
+                            ClubMyPageView()
+                        }, label: {
+                            EmptyView()
+                        })
+                    )
                 }
             }
         }

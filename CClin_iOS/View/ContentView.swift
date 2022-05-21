@@ -12,9 +12,8 @@ struct ContentView: View {
     @State var selectedTab: SelectedTab = SelectedTab.home
     
     var body: some View {
-//        NavigationView {
             TabView {
-                ProgressView()
+                ClubHomeView()
                     .tabItem {
                         Image("ic_home")
                         Text("홈")
@@ -44,9 +43,9 @@ struct ContentView: View {
                 
             }
             .accentColor(Color(hex: "F27953"))
-//        }
     }
 }
+    
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
