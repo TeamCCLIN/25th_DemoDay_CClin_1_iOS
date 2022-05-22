@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum SelectedTab: Hashable {
-    case home
-    case partner
-    case project
-    case affiliate
+enum SelectedTab: String, Hashable {
+    case home = "home"
+    case partner = "partner"
+    case project = "project"
+    case affiliate = "affiliate"
 }

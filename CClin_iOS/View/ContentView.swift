@@ -9,34 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var selectedTab: SelectedTab = SelectedTab.home
+    @State var selectedTab: SelectedTab = .home
     
     var body: some View {
-            TabView {
+            TabView(selection: $selectedTab) {
                 ClubHomeView()
                     .tabItem {
-                        Image("ic_home")
+                        Image(selectedTab == .home ? "ic_home_accent" : "ic_home")
                         Text("홈")
                     }
                     .tag(SelectedTab.home)
                 
                 ProgressView()
                     .tabItem {
-                        Image("ic_partner")
+                        Image(selectedTab == .partner ? "ic_partner_accent" : "ic_partner")
                         Text("끌린 파트너")
                     }
                     .tag(SelectedTab.partner)
                 
                 ProgressView()
                     .tabItem {
-                        Image("ic_project")
+                        Image(selectedTab == .project ? "ic_project_accent" : "ic_project")
                         Text("프로젝트")
                     }
                     .tag(SelectedTab.project)
                 
                 SponsoredHomeView()
                     .tabItem {
-                        Image("ic_affiliate")
+                        Image(selectedTab == .affiliate ? "ic_sponsor_accent" : "ic_sponsor")
                         Text("제휴협찬")
                     }
                     .tag(SelectedTab.affiliate)

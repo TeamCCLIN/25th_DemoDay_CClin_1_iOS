@@ -165,20 +165,13 @@ struct ClubMyPageView: View {
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    HStack(spacing:3) {
-                        Button {
-                            self.mode.wrappedValue.dismiss()
-                        } label: {
-                            Image(systemName: "chevron.backward")
-                                .foregroundColor(Color.black)
-                                .font(SpoqaHanSansNeo.regular(size: 20))
-                        }
-                        
-                        Text("마이페이지")
+                    Button {
+                        self.mode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "chevron.backward")
                             .foregroundColor(Color.black)
-                            .font(SpoqaHanSansNeo.bold(size: 20))
+                            .font(SpoqaHanSansNeo.regular(size: 20))
                     }
-                    
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
