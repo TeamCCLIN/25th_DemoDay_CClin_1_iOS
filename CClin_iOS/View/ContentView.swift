@@ -20,14 +20,14 @@ struct ContentView: View {
                     }
                     .tag(SelectedTab.home)
                 
-                ProgressView()
+                PartnerListView()
                     .tabItem {
                         Image("ic_partner")
                         Text("끌린 파트너")
                     }
                     .tag(SelectedTab.partner)
                 
-                ProgressView()
+                ProjectFirstView()
                     .tabItem {
                         Image("ic_project")
                         Text("프로젝트")
