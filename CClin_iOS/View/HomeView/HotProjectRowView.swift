@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HotProjectRowView: View {
     
-    @State var image: String = ""
+    @State var image: String = "dummy1"
     @State var title: String = ""
     @State var heartCnt: Int = 0
     @State var companyName: String = ""
@@ -17,17 +17,21 @@ struct HotProjectRowView: View {
     
     var body: some View {
         VStack {
-            Image("hot_project")
+            Image(image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 131)
                 .cornerRadius(5)
                 .padding(.bottom, 11)
             
-            Text(title)
-                .font(SpoqaHanSansNeo.bold(size: 13))
-                .lineLimit(2)
-             
+            HStack {
+                Text(title)
+                    .font(SpoqaHanSansNeo.bold(size: 13))
+                    .lineLimit(2)
+                
+                Spacer()
+            }
+            
             
             HStack {
                 Image(systemName: "heart.fill")
@@ -53,21 +57,14 @@ struct HotProjectRowView: View {
         .frame(width: 149, height: 235)
         .background(clickedHeart ? Color(hex: "F27953").opacity(0.1) : nil)
         .border(Color(hex: "F5F5F5"), width: 1)
-        .background(Color.white
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 0))
         .cornerRadius(5)
-        
-        
-//        .background(
-//        RoundedRectangle(cornerRadius: 5)
-//            .stroke(Color(hex: "F5F5F5"))
-//            .shadow(color: Color.gray_bottom, radius: 10, x: 0, y: 0))
-
     }
+    
+    
 }
 
 struct HotProjectRowView_Previews: PreviewProvider {
     static var previews: some View {
-        HotProjectRowView(image: "hot_project", title: "드론 적재 시스템과 시스템 운영 개념 수립", heartCnt: 124, companyName: "파블로항공", clickedHeart: true)
+        HotProjectRowView(image: "hot_project", title: "드론 적재 시스템과 시스템 운영 개념 수립", heartCnt: 124, companyName: "파블로항공", clickedHeart: false)
     }
 }

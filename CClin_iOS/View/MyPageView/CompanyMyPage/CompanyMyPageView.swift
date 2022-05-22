@@ -11,6 +11,8 @@ struct CompanyMyPageView: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
+    @State var isNotificationViewActive: Bool = false
+    
     var body: some View {
             VStack(spacing: 16) {
         
@@ -180,30 +182,31 @@ struct CompanyMyPageView: View {
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    HStack(spacing:3) {
-                        Button {
-                            self.mode.wrappedValue.dismiss()
-                        } label: {
-                            Image(systemName: "chevron.backward")
-                                .foregroundColor(Color.black)
-                                .font(SpoqaHanSansNeo.regular(size: 20))
-                        }
-                        
-                        Text("마이페이지")
-                            .foregroundColor(Color.black)
-                            .font(SpoqaHanSansNeo.bold(size: 20))
-                    }
-                    
+                    Button {
+                       self.mode.wrappedValue.dismiss()
+                   } label: {
+                       Image(systemName: "chevron.backward")
+                           .foregroundColor(Color.black)
+                           .font(SpoqaHanSansNeo.regular(size: 20))
+                   }
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack {
                         Button {
-                            //
+                            isNotificationViewActive = true
                         } label: {
                             Image(systemName: "bell")
                                 .foregroundColor(Color.black)
                         }
+                        .background(
+                            NavigationLink(isActive: $isNotificationViewActive, destination: {
+                                NotificationView()
+                            }, label: {
+                                EmptyView()
+                            })
+                        )
+                        
                         Button {
                             //
                         } label: {

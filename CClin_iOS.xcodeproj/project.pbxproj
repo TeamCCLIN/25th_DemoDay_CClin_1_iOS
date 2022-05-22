@@ -30,6 +30,11 @@
 		74793E352833378F008CE9F3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74793E342833378F008CE9F3 /* SearchBar.swift */; };
 		7482421A2838AF4000BA2023 /* HotCompanyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748242192838AF4000BA2023 /* HotCompanyRowView.swift */; };
 		7482421C2838BC2500BA2023 /* CompanyMyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482421B2838BC2500BA2023 /* CompanyMyPageView.swift */; };
+		748242242838CF4900BA2023 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748242232838CF4900BA2023 /* NotificationView.swift */; };
+		748242272838D0EC00BA2023 /* NotificationAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748242262838D0EC00BA2023 /* NotificationAllView.swift */; };
+		748242292838D0FE00BA2023 /* NotificationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748242282838D0FE00BA2023 /* NotificationRowView.swift */; };
+		7482422B2838DC1D00BA2023 /* NotificationMyPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482422A2838DC1D00BA2023 /* NotificationMyPostView.swift */; };
+		748242312838E09400BA2023 /* NotifiacationMyCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748242302838E09400BA2023 /* NotifiacationMyCommentView.swift */; };
 		74AB014E2833BB1200996486 /* SponsoredRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB014D2833BB1200996486 /* SponsoredRowView.swift */; };
 		74AB01562833D2EE00996486 /* SponsoredWritingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB01552833D2EE00996486 /* SponsoredWritingModel.swift */; };
 		74AB015B2833E04300996486 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB015A2833E04300996486 /* UserModel.swift */; };
@@ -81,6 +86,11 @@
 		74793E342833378F008CE9F3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		748242192838AF4000BA2023 /* HotCompanyRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCompanyRowView.swift; sourceTree = "<group>"; };
 		7482421B2838BC2500BA2023 /* CompanyMyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyMyPageView.swift; sourceTree = "<group>"; };
+		748242232838CF4900BA2023 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		748242262838D0EC00BA2023 /* NotificationAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAllView.swift; sourceTree = "<group>"; };
+		748242282838D0FE00BA2023 /* NotificationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRowView.swift; sourceTree = "<group>"; };
+		7482422A2838DC1D00BA2023 /* NotificationMyPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMyPostView.swift; sourceTree = "<group>"; };
+		748242302838E09400BA2023 /* NotifiacationMyCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiacationMyCommentView.swift; sourceTree = "<group>"; };
 		74AB014D2833BB1200996486 /* SponsoredRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsoredRowView.swift; sourceTree = "<group>"; };
 		74AB01552833D2EE00996486 /* SponsoredWritingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsoredWritingModel.swift; sourceTree = "<group>"; };
 		74AB015A2833E04300996486 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -237,6 +247,18 @@
 			path = " SponsoredView";
 			sourceTree = "<group>";
 		};
+		748242252838D0D300BA2023 /* NotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				748242232838CF4900BA2023 /* NotificationView.swift */,
+				748242262838D0EC00BA2023 /* NotificationAllView.swift */,
+				748242282838D0FE00BA2023 /* NotificationRowView.swift */,
+				7482422A2838DC1D00BA2023 /* NotificationMyPostView.swift */,
+				748242302838E09400BA2023 /* NotifiacationMyCommentView.swift */,
+			);
+			path = NotificationView;
+			sourceTree = "<group>";
+		};
 		74AB01502833C5D300996486 /* RegisterModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +338,7 @@
 		74B6BCBE2837B1FC00168B31 /* MyPageView */ = {
 			isa = PBXGroup;
 			children = (
+				748242252838D0D300BA2023 /* NotificationView */,
 				74B6BCBF2837B20E00168B31 /* ClubMyPageView */,
 				74B6BCC02837B21E00168B31 /* CompanyMyPage */,
 			);
@@ -482,9 +505,11 @@
 				74793E332833313D008CE9F3 /* SponsoredHomeView.swift in Sources */,
 				74AB01692833F3CB00996486 /* UserLoginManager.swift in Sources */,
 				74B6BCBD2837A50200168B31 /* Font+SpoqaHanSansNeo.swift in Sources */,
+				748242292838D0FE00BA2023 /* NotificationRowView.swift in Sources */,
 				7451032E282E4FEE0022F444 /* LoginView.swift in Sources */,
 				74AB016B2833F7B000996486 /* LoginResponse.swift in Sources */,
 				7457C499282E5158008E7CA5 /* ClubRegisterView1.swift in Sources */,
+				7482422B2838DC1D00BA2023 /* NotificationMyPostView.swift in Sources */,
 				74AB01612833F0F000996486 /* Repositories.swift in Sources */,
 				74793E30283296C6008CE9F3 /* RegisterApprovedView.swift in Sources */,
 				74AB01562833D2EE00996486 /* SponsoredWritingModel.swift in Sources */,
@@ -493,12 +518,14 @@
 				7457C4A1282E989E008E7CA5 /* ClubRegisterView2.swift in Sources */,
 				7482421C2838BC2500BA2023 /* CompanyMyPageView.swift in Sources */,
 				7451031D282C08B90022F444 /* Persistence.swift in Sources */,
+				748242242838CF4900BA2023 /* NotificationView.swift in Sources */,
 				7457C49D282E5D1D008E7CA5 /* CheckboxToggleStyle.swift in Sources */,
 				74510331282E50120022F444 /* LargeButton.swift in Sources */,
 				74B6BCCD2838A34500168B31 /* HotProjectRowView.swift in Sources */,
 				74793E2E283292A5008CE9F3 /* SelectRegisterTypeView.swift in Sources */,
 				74B6BCC22837B2B100168B31 /* ClubMyPageView.swift in Sources */,
 				74510329282C0A320022F444 /* Color+hex.swift in Sources */,
+				748242312838E09400BA2023 /* NotifiacationMyCommentView.swift in Sources */,
 				74510320282C08B90022F444 /* CClin_iOS.xcdatamodeld in Sources */,
 				74B6BCAD28366D0F00168B31 /* RealmUserModel.swift in Sources */,
 				74B6BCC928389B2B00168B31 /* NewAlliance.swift in Sources */,
@@ -511,6 +538,7 @@
 				74B6BCC728389AF900168B31 /* ClubHomeView.swift in Sources */,
 				74AB015F2833EEE400996486 /* API.swift in Sources */,
 				74510314282C08B70022F444 /* CClin_iOSApp.swift in Sources */,
+				748242272838D0EC00BA2023 /* NotificationAllView.swift in Sources */,
 				74B6BCAF283795EE00168B31 /* ProgressBar.swift in Sources */,
 				74AB01632833F11E00996486 /* HTTPStatusCode+Enum.swift in Sources */,
 			);
