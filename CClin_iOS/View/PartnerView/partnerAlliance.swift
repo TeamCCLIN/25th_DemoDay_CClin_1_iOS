@@ -20,7 +20,7 @@ struct partnerAlliance: View {
                     HStack {
                         Image(imgaeUrl)
                             .resizable()
-                            .frame(width: 100, height: 100)
+                            .frame(width: 200, height: 90)
                             .cornerRadius(5)
                             .padding(.trailing, 10)
                         Spacer()
@@ -29,15 +29,15 @@ struct partnerAlliance: View {
                         Text(category)
                             .foregroundColor(Color.main_club)
                             .font(SpoqaHanSansNeo.bold(size: 11))
-                            .padding(.bottom, 10)
+                            .padding(.bottom, 8)
                         
                         Spacer()
                     }
                     
                     HStack {
                         Text(title)
-                            .font(SpoqaHanSansNeo.bold(size: 13))
-                            .padding(.bottom, 10)
+                            .font(SpoqaHanSansNeo.bold(size: 15))
+                            .padding(.bottom, 8)
                         
                         Spacer()
                     }
