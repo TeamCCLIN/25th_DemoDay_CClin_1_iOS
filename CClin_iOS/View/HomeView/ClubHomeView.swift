@@ -33,9 +33,9 @@ struct ClubHomeView: View {
                                 
                                 HotProjectRowView(image: "dummy2", title: "AWS 기반 기업 데이터 분석 프로젝트", heartCnt: 124, companyName: "파블로 항공", clickedHeart: true)
                                 
-                                HotProjectRowView(image: "dummy1", title: "스케쥴링 앱 UI/UX 프로젝트", heartCnt: 124, companyName: "파블로 항공", clickedHeart: false)
-                                
                                 HotProjectRowView(image: "hot_project", title: "드론 적재 시스템과 시스템 운영 개념 수립", heartCnt: 124, companyName: "파블로 항공", clickedHeart: false)
+                                
+                                HotProjectRowView(image: "dummy1", title: "스케쥴링 앱 UI/UX 프로젝트", heartCnt: 124, companyName: "파블로 항공", clickedHeart: false)
                                 
                                 HotProjectRowView(image: "hot_project", title: "드론 적재 시스템과 시스템 운영 개념 수립", heartCnt: 124, companyName: "파블로 항공", clickedHeart: false)
                             }
@@ -84,15 +84,15 @@ struct ClubHomeView: View {
                         newAlliance(imgaeUrl: "dummy3", dday: 101, title: "개인화 뉴스 추천 서비스 개발", companyName: "(주)42마루", heartCnt: 124, commentCnt: 22)
                             .padding(.bottom, 10)
                         
-                        newAlliance(imgaeUrl: "hot_project",dday: 98, title: "IoT 서비스 페르소나 설계 및 기획전 공모", companyName: "(주)고퀄", heartCnt: 134, commentCnt: 22)
+                        newAlliance(imgaeUrl: "dummy4",dday: 98, title: "IoT 서비스 페르소나 설계 및 기획전 공모", companyName: "(주)고퀄", heartCnt: 134, commentCnt: 22)
                             .padding(.bottom, 10)
                         
-                        newAlliance(imgaeUrl: "dummy1", dday: 33, title: "IoT 서비스 페르소나 설계 및 기획전 아이디어 공모", companyName: "큐시즘", heartCnt: 120, commentCnt: 32)
+                        newAlliance(imgaeUrl: "dummy5", dday: 33, title: "드론 적재 시스템과 시스템 운영 개념 수립", companyName: "(주)파블로항공", heartCnt: 120, commentCnt: 32)
                         
-                        newAlliance(imgaeUrl: "dummy2", title: "개인화 뉴스 추천 서비스 개발", companyName: "큐시즘", heartCnt: 20, commentCnt: 22)
+                        newAlliance(imgaeUrl: "dummy2", title: "개인화 캐릭터 추천 서비스 개발", companyName: "(주)비트바이트", heartCnt: 20, commentCnt: 22)
                             .padding(.bottom, 10)
                         
-                        newAlliance(imgaeUrl: "hot_project", title: "IoT 서비스 페르소나 설계 및 기획전 아이디어 공모", companyName: "큐시즘", heartCnt: 120, commentCnt: 32)
+                        newAlliance(imgaeUrl: "hot_project", title: "IoT 기획전 아이디어 공모", companyName: "(주)오늘의 집", heartCnt: 120, commentCnt: 32)
                     }
                     
                     Spacer()

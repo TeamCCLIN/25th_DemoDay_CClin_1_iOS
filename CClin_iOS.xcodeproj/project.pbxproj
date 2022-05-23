@@ -17,6 +17,9 @@
 		7451032B282C0A7A0022F444 /* SelectedTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7451032A282C0A7A0022F444 /* SelectedTab.swift */; };
 		7451032E282E4FEE0022F444 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7451032D282E4FEE0022F444 /* LoginView.swift */; };
 		74510331282E50120022F444 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74510330282E50120022F444 /* LargeButton.swift */; };
+		74548E76283B6E6900F3802A /* SponsoredFrontRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74548E75283B6E6900F3802A /* SponsoredFrontRowView.swift */; };
+		74548E78283B7A3100F3802A /* SponsoredDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74548E77283B7A3100F3802A /* SponsoredDetailView.swift */; };
+		74548E7A283B7CA200F3802A /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74548E79283B7CA200F3802A /* CommentView.swift */; };
 		7457C499282E5158008E7CA5 /* ClubRegisterView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C498282E5158008E7CA5 /* ClubRegisterView1.swift */; };
 		7457C49B282E51ED008E7CA5 /* RoundTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C49A282E51ED008E7CA5 /* RoundTextFieldStyle.swift */; };
 		7457C49D282E5D1D008E7CA5 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C49C282E5D1D008E7CA5 /* CheckboxToggleStyle.swift */; };
@@ -73,6 +76,9 @@
 		7451032A282C0A7A0022F444 /* SelectedTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTab.swift; sourceTree = "<group>"; };
 		7451032D282E4FEE0022F444 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		74510330282E50120022F444 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
+		74548E75283B6E6900F3802A /* SponsoredFrontRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsoredFrontRowView.swift; sourceTree = "<group>"; };
+		74548E77283B7A3100F3802A /* SponsoredDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsoredDetailView.swift; sourceTree = "<group>"; };
+		74548E79283B7CA200F3802A /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		7457C498282E5158008E7CA5 /* ClubRegisterView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRegisterView1.swift; sourceTree = "<group>"; };
 		7457C49A282E51ED008E7CA5 /* RoundTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextFieldStyle.swift; sourceTree = "<group>"; };
 		7457C49C282E5D1D008E7CA5 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
@@ -243,6 +249,9 @@
 			children = (
 				74793E322833313D008CE9F3 /* SponsoredHomeView.swift */,
 				74AB014D2833BB1200996486 /* SponsoredRowView.swift */,
+				74548E75283B6E6900F3802A /* SponsoredFrontRowView.swift */,
+				74548E77283B7A3100F3802A /* SponsoredDetailView.swift */,
+				74548E79283B7CA200F3802A /* CommentView.swift */,
 			);
 			path = " SponsoredView";
 			sourceTree = "<group>";
@@ -506,6 +515,7 @@
 				74AB01692833F3CB00996486 /* UserLoginManager.swift in Sources */,
 				74B6BCBD2837A50200168B31 /* Font+SpoqaHanSansNeo.swift in Sources */,
 				748242292838D0FE00BA2023 /* NotificationRowView.swift in Sources */,
+				74548E76283B6E6900F3802A /* SponsoredFrontRowView.swift in Sources */,
 				7451032E282E4FEE0022F444 /* LoginView.swift in Sources */,
 				74AB016B2833F7B000996486 /* LoginResponse.swift in Sources */,
 				7457C499282E5158008E7CA5 /* ClubRegisterView1.swift in Sources */,
@@ -516,6 +526,7 @@
 				74AB01672833F1C400996486 /* RegisterResponse.swift in Sources */,
 				74AB015B2833E04300996486 /* UserModel.swift in Sources */,
 				7457C4A1282E989E008E7CA5 /* ClubRegisterView2.swift in Sources */,
+				74548E7A283B7CA200F3802A /* CommentView.swift in Sources */,
 				7482421C2838BC2500BA2023 /* CompanyMyPageView.swift in Sources */,
 				7451031D282C08B90022F444 /* Persistence.swift in Sources */,
 				748242242838CF4900BA2023 /* NotificationView.swift in Sources */,
@@ -525,6 +536,7 @@
 				74793E2E283292A5008CE9F3 /* SelectRegisterTypeView.swift in Sources */,
 				74B6BCC22837B2B100168B31 /* ClubMyPageView.swift in Sources */,
 				74510329282C0A320022F444 /* Color+hex.swift in Sources */,
+				74548E78283B7A3100F3802A /* SponsoredDetailView.swift in Sources */,
 				748242312838E09400BA2023 /* NotifiacationMyCommentView.swift in Sources */,
 				74510320282C08B90022F444 /* CClin_iOS.xcdatamodeld in Sources */,
 				74B6BCAD28366D0F00168B31 /* RealmUserModel.swift in Sources */,
