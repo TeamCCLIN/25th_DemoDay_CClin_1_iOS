@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct newAlliance: View {
+struct NewAlliance: View {
     @State var imgaeUrl: String = "hot_alliance"
     @State var dday: Int = 102
     @State var title: String = "title"
@@ -35,6 +35,8 @@ struct newAlliance: View {
                             .font(SpoqaHanSansNeo.medium(size: 11))
                             .padding(.trailing, 22)
                         
+                        Spacer()
+                        
                         Image(systemName: "heart.fill")
                             .resizable()
                             .frame(width: 8, height: 6)
@@ -44,7 +46,6 @@ struct newAlliance: View {
                             .foregroundColor(Color(hex: "ACACAC"))
                             .font(SpoqaHanSansNeo.medium(size: 11))
                         
-                        Spacer()
                     }
                     
                     HStack {
@@ -66,6 +67,6 @@ struct newAlliance: View {
 
 struct newAlliance_Previews: PreviewProvider {
     static var previews: some View {
-        newAlliance()
+        NewAlliance()
     }
 }

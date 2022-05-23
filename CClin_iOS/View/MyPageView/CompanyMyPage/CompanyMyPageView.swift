@@ -12,6 +12,7 @@ struct CompanyMyPageView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     @State var isNotificationViewActive: Bool = false
+    @State var isKeepViewActive: Bool = false
     
     var body: some View {
         VStack() {
@@ -115,12 +116,19 @@ struct CompanyMyPageView: View {
             VStack(spacing: 13) {
                 HStack {
                     Button {
-                        //
+                        isKeepViewActive = true
                     } label: {
                         Text("찜한 목록")
                             .foregroundColor(Color.black)
                             .font(SpoqaHanSansNeo.medium(size: 15))
                     }
+                    .background(
+                        NavigationLink(isActive: $isKeepViewActive, destination: {
+                            KeepView()
+                        }, label: {
+                            EmptyView()
+                        })
+                    )
                     
                     Spacer()
                 }
@@ -187,7 +195,7 @@ struct CompanyMyPageView: View {
                     self.mode.wrappedValue.dismiss()
                 } label: {
                     Image(systemName: "chevron.backward")
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color.white)
                         .font(SpoqaHanSansNeo.regular(size: 20))
                 }
             }
@@ -197,7 +205,7 @@ struct CompanyMyPageView: View {
                     Button {
                         isNotificationViewActive = true
                     } label: {
-                        Image(systemName: "bell")
+                        Image("ic_notification_white")
                             .foregroundColor(Color.black)
                     }
                     .background(
@@ -212,7 +220,7 @@ struct CompanyMyPageView: View {
                         //
                     } label: {
                         Image(systemName: "gearshape")
-                            .foregroundColor(Color.black)
+                            .foregroundColor(Color.white)
                             .padding(.trailing, 15)
                     }
                 }

@@ -1,35 +1,33 @@
 //
-//  NotificationView.swift
+//  KeepView.swift
 //  CClin_iOS
 //
-//  Created by 홍세은 on 2022/05/21.
+//  Created by 홍세은 on 2022/05/24.
 //
 
 import SwiftUI
 
-struct NotificationView: View {
+struct KeepView: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
-    @State var selectNotificationType: Int = 0
+    @State var selectKeepType: Int = 0
     
     var body: some View {
         VStack {
-            Picker("", selection: $selectNotificationType ) {
-                Text("전체").tag(0)
-                Text("내 게시글").tag(1)
-                Text("내 댓글").tag(2)
+            Picker("", selection: $selectKeepType ) {
+                Text("끌린 파트너").tag(0)
+                Text("제휴/협찬").tag(1)
             }
             .padding(.horizontal, 30)
             .pickerStyle(SegmentedPickerStyle())
             
             VStack {
-                switch(selectNotificationType) {
-                case 0: NotificationAllView()
-                case 1: NotificationMyPostView()
-                case 2: NotifiacationMyCommentView()
+                switch(selectKeepType) {
+                case 0: KeepPartnerView()
+                case 1: KeepSponsoredView()
                 default:
-                    NotificationAllView()
+                    KeepPartnerView()
                 }
             
             }
@@ -40,7 +38,7 @@ struct NotificationView: View {
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Text("알림")
+                Text("찜한 목록")
                     .font(SpoqaHanSansNeo.bold(size: 20))
             }
             ToolbarItem(placement: .navigationBarLeading) {
@@ -56,8 +54,8 @@ struct NotificationView: View {
     }
 }
 
-struct NotificationView_Previews: PreviewProvider {
+struct KeepView_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationView()
+        KeepView()
     }
 }

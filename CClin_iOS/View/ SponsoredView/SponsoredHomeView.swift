@@ -16,6 +16,12 @@ struct SponsoredHomeView: View {
     
     @State var isMyPageViewActive: Bool = false
     @State var isSponsoredDetailViewActive: Bool = false
+    
+    @State var sponsoredArray: [SponsoredRowView] = [
+        SponsoredRowView(writer: "학생단체", type: "홍보", date: "06/12  08:01", title: "대학생 단체도 돕고 우리 브랜드 홍보도 하고!", description: "총 인원 501명인 전국 디자인학과 재학생 단체에서 인쇄가 필요합니다", likeCnt: 11, likeClicked: true),
+        SponsoredRowView(writer: "기업", type: "협찬", date: "07/21 01:01", title: "에너지 드링크 협찬합니다.", description: "러닝, 스포츠 관련 동아리에 에너지 드링크 20개입 3박스", likeCnt: 33, likeClicked: false),
+        SponsoredRowView(writer: "기업", type: "협찬", date: "04/26  12:10", title: "에너지 드링크 협찬합니다.", description: "러닝, 스포츠 관련 동아리에 에너지 드링크 20개입 3박스", likeCnt: 33, likeClicked: false),
+        SponsoredRowView(writer: "학생단체", type: "협찬", date: "04/26  12:10", title: "에너지 드링크 협찬합니다.", description: "러닝, 스포츠 관련 동아리에 에너지 드링크 20개입 3박스", likeCnt: 33, likeClicked: false)]
 
     var body: some View {
         NavigationView {
@@ -138,8 +144,6 @@ struct SponsoredHomeView: View {
                                 })
                             )
 
-                            
-                            
                             SponsoredRowView(writer: "AD", type: "협찬", date: "05/23  09:27", title: "강연할 장소 협찬 구합니다", description: "2022.06.13 오후 3-5시까지 인원 30명 정도 수용 가능", likeCnt: 8, likeClicked: false)
                         }
                         
@@ -147,30 +151,14 @@ struct SponsoredHomeView: View {
                             .foregroundColor(Color.gray_button_line)
                             .frame(width: .infinity, height: 8)
                         
-                        
-                        
                         VStack {
-                            SponsoredRowView(writer: "학생단체", type: "홍보", date: "06/12  08:01", title: "대학생 단체도 돕고 우리 브랜드 홍보도 하고!", description: "총 인원 501명인 전국 디자인학과 재학생 단체에서 인쇄가 필요합니다", likeCnt: 11, likeClicked: true)
-                            
-                            Rectangle()
-                                .foregroundColor(Color.gray_button_line)
-                                .frame(width: .infinity, height: 1)
-                            
-                            SponsoredRowView(writer: "기업", type: "협찬", date: "07/21 01:01", title: "에너지 드링크 협찬합니다.", description: "러닝, 스포츠 관련 동아리에 에너지 드링크 20개입 3박스", likeCnt: 33, likeClicked: false)
-                            
-                            Rectangle()
-                                .foregroundColor(Color.gray_button_line)
-                                .frame(width: .infinity, height: 1)
-                            
-                            SponsoredRowView(writer: "기업", type: "협찬", date: "04/26  12:10", title: "에너지 드링크 협찬합니다.", description: "러닝, 스포츠 관련 동아리에 에너지 드링크 20개입 3박스", likeCnt: 33, likeClicked: false)
-                            
-                            Rectangle()
-                                .foregroundColor(Color.gray_button_line)
-                                .frame(width: .infinity, height: 1)
-                            
-                            SponsoredRowView(writer: "학생단체", type: "협찬", date: "04/26  12:10", title: "에너지 드링크 협찬합니다.", description: "러닝, 스포츠 관련 동아리에 에너지 드링크 20개입 3박스", likeCnt: 33, likeClicked: false)
+                            ForEach(0..<sponsoredArray.count, id:\.self) { i in
+                                sponsoredArray[i]
+                                Rectangle()
+                                    .foregroundColor(Color.gray_button_line)
+                                    .frame(width: .infinity, height: 1)
+                            }
                         }
-                        
                     }
                 }
                 
@@ -183,10 +171,13 @@ struct SponsoredHomeView: View {
                 .padding(.trailing, 31)
                 
             }
-            .navigationTitle("제휴/협찬")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
             .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("제휴/협찬")
+                        .font(SpoqaHanSansNeo.bold(size: 20))
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         isMyPageViewActive = true
