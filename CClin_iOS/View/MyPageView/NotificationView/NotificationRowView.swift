@@ -7,10 +7,18 @@
 
 import SwiftUI
 
+struct NotificationRow: Hashable {
+    var checkedImage: String = ""
+    var notCheckedImage: String = ""
+    var isChecked: Bool = false
+    var date: String = ""
+    var title: String = ""
+    var description: String = ""
+}
+
 struct NotificationRowView: View {
     
-    let checkedImage: String = "ic_notification"
-    
+    @State var checkedImage: String = "ic_notification"
     @State var notCheckedImage: String = "ic_notification_disable"
     @State var isChecked: Bool = true
     @State var date: String = "05/15 22:57"
@@ -24,28 +32,37 @@ struct NotificationRowView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(height:21)
-                    .padding(.trailing, 20)
+                    .padding(.trailing, 23)
                 
                 VStack(alignment: .leading) {
-                    Text(date)
-                        .font(SpoqaHanSansNeo.regular(size: 8))
-                    Text(title)
-                        .font(SpoqaHanSansNeo.bold(size: 11))
+                    HStack {
+                        Text(title)
+                            .foregroundColor(isChecked ? Color.gray_icon : Color.gray_text)
+                            .font(SpoqaHanSansNeo.medium(size: 11))
+                        
+                        Spacer()
+                        
+                        Text(date)
+                            .foregroundColor(isChecked ? Color.gray_button_line : Color.gray_bottom_text)
+                            .font(SpoqaHanSansNeo.regular(size: 11))
+                    }
+                    .padding(.bottom, 8)
+                  
                     Text(description)
-                        .font(SpoqaHanSansNeo.regular(size: 10))
-                        .lineLimit(1)
+                        .foregroundColor(isChecked ? Color.gray_text : Color.black)
+                        .font(SpoqaHanSansNeo.regular(size: 13))
+                        .lineLimit(2)
                 }
-                .foregroundColor(isChecked ? Color(hex: "9E9E9E") : Color.black)
-                
                 Spacer()
             }
             .padding(.leading, 3)
-            .padding(.vertical, 7)
+            .padding(.vertical, 8)
             
             Rectangle()
                 .frame(height:1)
                 .foregroundColor(Color.gray_button_line)
         }
+        .padding(.horizontal, 30)
     }
 }
 
