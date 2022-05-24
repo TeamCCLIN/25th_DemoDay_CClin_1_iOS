@@ -19,7 +19,8 @@ struct LoginView: View {
                 Image("logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height:150)
+                    .frame(height:38)
+                    .padding(.bottom, 38)
                 
                 TextField("아이디", text: $idInput)
                     .padding(.horizontal, 10)

@@ -123,6 +123,11 @@ struct SponsoredDetailView: View {
                 }
             }
             
+            ToolbarItem(placement: .principal) {
+               Text("제휴/협찬")
+                    .font(SpoqaHanSansNeo.bold(size: 20))
+            }
+            
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
                     isMyPageViewActive = true

@@ -222,9 +222,9 @@
 		74510326282C09D70022F444 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				74510315282C08B70022F444 /* ContentView.swift */,
 				006148B92838CE5E00C48F2C /* PartnerView */,
 				006148B82838CE4600C48F2C /* ProjectView */,
-				74510315282C08B70022F444 /* ContentView.swift */,
 				74B6BCC528389AEE00168B31 /* HomeView */,
 				74B6BCBE2837B1FC00168B31 /* MyPageView */,
 				74793E3128333103008CE9F3 /*  SponsoredView */,
