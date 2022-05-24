@@ -15,105 +15,107 @@ struct PartnerCompanyView: View {
     @State var showDeadlineOrder: Bool = false
     @State var isMyPageViewActive: Bool = false
     var body: some View {
-        ZStack{
-            VStack {
-                HStack {
-                    Capsule()
-                        .stroke(Color(hex: "EFEFEF"))
-                        .frame(width: 81, height: 25, alignment: .leading)
-                        .overlay(
-                            HStack {
-                                Text("카테고리")
-                                    .font(.system(size: 11))
-                                Image(systemName: "chevron.down")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: 3)
-                            })
-                    
-                    Capsule()
-                        .stroke(Color(hex: "EFEFEF"))
-                        .frame(width: 40, height: 25, alignment: .leading)
-                        .overlay(
-                            HStack {
-                                Text("경쟁")
-                                    .font(.system(size: 11))
-                                    .foregroundColor(Color(hex: "ADADAD"))
-                            })
-                    
-                    Capsule()
-                        .stroke(Color(hex: "EFEFEF"))
-                        .frame(width: 70, height: 25, alignment: .leading)
-                        .overlay(
-                            HStack {
-                                Text("인재 채용")
-                                    .font(.system(size: 11))
-                                    .foregroundColor(Color(hex: "ADADAD"))
-                            })
-                    
-                    Capsule()
-                        .stroke(Color(hex: "EFEFEF"))
-                        .frame(width: 80, height: 25, alignment: .leading)
-                        .overlay(
-                            HStack {
-                                Text("아이디어 공모")
-                                    .font(.system(size: 11))
-                                    .foregroundColor(Color(hex: "ADADAD"))
-                            })
-                    
-                    Spacer()
-                    
-                }
-                .padding(.top, 10)
-                .padding(.bottom, 15)
-                
-                HStack {
-                    Text("총 395건")
-                        .font(.system(size: 10))
-                        .foregroundColor(Color(hex: "474646"))
-                    
-                    Spacer()
-                    
-                    Button {
-                        showLatestOrder = true
-                        showPopularityOrder = false
-                        showDeadlineOrder = false
-                    } label: {
-                        Text("최신순")
-                            .foregroundColor(Color.black)
-                            .font(.system(size: 10, weight: showLatestOrder ? .heavy: .regular))
-                    }
-                    
-                    Text("|")
-                        .font(.system(size: 10))
-                    
-                    Button {
-                        showLatestOrder = false
-                        showPopularityOrder = false
-                        showDeadlineOrder = true
-                    } label: {
-                        Text("마감순")
-                            .foregroundColor(Color.black)
-                            .font(.system(size: 10, weight: showDeadlineOrder ? .heavy: .regular))
-                    }
-                    
-                    Text("|")
-                        .font(.system(size: 10))
-                    
-                    Button {
-                        showLatestOrder = false
-                        showPopularityOrder = true
-                        showDeadlineOrder = false
-                    } label: {
-                        Text("인기순")
-                            .foregroundColor(Color.black)
-                            .font(.system(size: 10, weight: showPopularityOrder ? .heavy: .regular))
-                    }
-                }
-                .padding(.bottom, 15)
-            }
-            .padding(.horizontal, 30)
+        
+        VStack {
             
+            HStack {
+                Text("총 395건")
+                    .font(.system(size: 10))
+                    .foregroundColor(Color(hex: "474646"))
+                
+                Spacer()
+                
+                Button {
+                    showLatestOrder = true
+                    showPopularityOrder = false
+                    showDeadlineOrder = false
+                } label: {
+                    Text("최신순")
+                        .foregroundColor(Color.black)
+                        .font(.system(size: 10, weight: showLatestOrder ? .heavy: .regular))
+                }
+                
+                Text("|")
+                    .font(.system(size: 10))
+                
+                Button {
+                    showLatestOrder = false
+                    showPopularityOrder = false
+                    showDeadlineOrder = true
+                } label: {
+                    Text("마감순")
+                        .foregroundColor(Color.black)
+                        .font(.system(size: 10, weight: showDeadlineOrder ? .heavy: .regular))
+                }
+                
+                Text("|")
+                    .font(.system(size: 10))
+                
+                Button {
+                    showLatestOrder = false
+                    showPopularityOrder = true
+                    showDeadlineOrder = false
+                } label: {
+                    Text("인기순")
+                        .foregroundColor(Color.black)
+                        .font(.system(size: 10, weight: showPopularityOrder ? .heavy: .regular))
+                }
+            }
+            .padding(.bottom, 15)
+        }
+        .padding(.top, 10)
+        
+        VStack {
+            HStack {
+                Capsule()
+                    .stroke(Color(hex: "EFEFEF"))
+                    .frame(width: 81, height: 25, alignment: .leading)
+                    .overlay(
+                        HStack {
+                            Text("카테고리")
+                                .font(.system(size: 11))
+                            Image(systemName: "chevron.down")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 3)
+                        })
+                
+                Capsule()
+                    .stroke(Color(hex: "EFEFEF"))
+                    .frame(width: 40, height: 25, alignment: .leading)
+                    .overlay(
+                        HStack {
+                            Text("경쟁")
+                                .font(.system(size: 11))
+                                .foregroundColor(Color(hex: "ADADAD"))
+                        })
+                
+                Capsule()
+                    .stroke(Color(hex: "EFEFEF"))
+                    .frame(width: 70, height: 25, alignment: .leading)
+                    .overlay(
+                        HStack {
+                            Text("인재 채용")
+                                .font(.system(size: 11))
+                                .foregroundColor(Color(hex: "ADADAD"))
+                        })
+                
+                Capsule()
+                    .stroke(Color(hex: "EFEFEF"))
+                    .frame(width: 80, height: 25, alignment: .leading)
+                    .overlay(
+                        HStack {
+                            Text("아이디어 공모")
+                                .font(.system(size: 11))
+                                .foregroundColor(Color(hex: "ADADAD"))
+                        })
+                
+                Spacer()
+                
+            }
+        }
+        
+        VStack{
             List {
                 ForEach(0..<2) { i in
                     partnerAlliance(imgaeUrl: "hot_project", category: "#IT서비스", title: "(주)고퀄", projectDescription: "누구나 쉽게 스마트홈을 누릴 수 있도록 스마트홈 IoT의 대중화를 이끌다")
@@ -137,9 +139,8 @@ struct PartnerCompanyView: View {
                         .listRowSeparator(.hidden)
                 }
             }
-            .padding(.horizontal, 10)
-            .listStyle(.plain)
         }
+        .listStyle(.plain)
     }
 }
 
