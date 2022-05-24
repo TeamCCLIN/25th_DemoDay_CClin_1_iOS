@@ -85,9 +85,9 @@ struct CustomTopTabBar: View {
     @Binding var tabIndex: Int
     var body: some View {
         HStack(spacing: 20) {
-            TabBarButton(text: "기업", isSelected: .constant(tabIndex == 0))
+            TabBarButton(text: "                기업              ", isSelected: .constant(tabIndex == 0))
                 .onTapGesture { onButtonTapped(index: 0) }
-            TabBarButton(text: "학생 단체", isSelected: .constant(tabIndex == 1))
+            TabBarButton(text: "              학생 단체                        ", isSelected: .constant(tabIndex == 1))
                 .onTapGesture { onButtonTapped(index: 1) }
             Spacer()
         }
