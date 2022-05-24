@@ -1,7 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "ad_goqual.png",
+      "filename" : "Group 258-1.svg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Group 258.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
