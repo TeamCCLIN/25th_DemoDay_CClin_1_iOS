@@ -1,22 +1,22 @@
 //
-//  SponsoredDetailView.swift
+//  ShowPostingView.swift
 //  CClin_iOS
 //
-//  Created by 홍세은 on 2022/05/23.
+//  Created by 홍세은 on 2022/05/24.
 //
 
 import SwiftUI
-import Foundation
 
-struct SponsoredDetailView: View {
+struct ShowPostedView: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
+    @Binding var title: String
+    @Binding var description: String
+    @Binding var date: String
+    
     @State var isMyPageViewActive: Bool = false
     @State var inputComment: String = ""
-    
-    
-    @State var commentArray: [Comment] = [Comment(image: "logo_readyme", name: "레디미", date: "05/18  07:12", description:  "자세한 프로젝트 진행 일정 및 평가 심사항목이 무엇인가요?")]
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -36,7 +36,7 @@ struct SponsoredDetailView: View {
                                     .font(SpoqaHanSansNeo.bold(size: 13))
                                     .padding(.bottom, 3)
                                 
-                                Text("05/15  23:57")
+                                Text(date)
                                     .foregroundColor(Color(hex: "D8D8D8"))
                                     .font(SpoqaHanSansNeo.regular(size: 11))
                                 
@@ -47,7 +47,7 @@ struct SponsoredDetailView: View {
                         
                         VStack() {
                             HStack {
-                                Text("기업 프로젝트 평가단 모집")
+                                Text(title)
                                     .font(SpoqaHanSansNeo.bold(size: 17))
                                     .padding(.bottom, 17)
                                 
@@ -55,7 +55,7 @@ struct SponsoredDetailView: View {
                             }
                             
                             HStack {
-                                Text("5개의 기업과 10일간 진행되는 기업 프로젝트 발표식에 평가단을 모집합니다.")
+                                Text(description)
                                     .font(SpoqaHanSansNeo.medium(size: 13))
                                 
                                 Spacer()
@@ -67,7 +67,7 @@ struct SponsoredDetailView: View {
                             Spacer()
                             Image(systemName: "heart.fill")
                                 .foregroundColor(Color.main_club)
-                            Text("11")
+                            Text("0")
                                 .foregroundColor(Color(hex: "ACACAC"))
                         }
                         .font(SpoqaHanSansNeo.medium(size: 13))
@@ -79,13 +79,6 @@ struct SponsoredDetailView: View {
                         .foregroundColor(Color.gray_button_line)
                         .frame(height: 8)
                     
-                    VStack {
-                        ForEach(commentArray, id:\.self) { i in
-                            CommentView(image: i.image, name: i.name, date: i.date, description: i.description)
-                        }
-                        .padding(.vertical, 21)
-                    }
-                    .padding(.horizontal, 31)
                 }
             }
             TextField("", text:$inputComment)
@@ -101,17 +94,7 @@ struct SponsoredDetailView: View {
                             .padding(.trailing, 15)
                         
                         Button {
-                            let date = Date()
-                            let calendar = Calendar.current
-                            let hour = calendar.component(.hour, from: date)
-                            let minutes = calendar.component(.minute, from: date)
-                            
-                            let commentNow = Comment(image: "logo_kusitsm", name: "한국대학생IT경영학회", date: "05/28 \(hour):\(minutes)", description: inputComment)
-                            
-                            commentArray.append(commentNow)
-                            
-                           inputComment = ""
-                            
+                           //
                         } label: {
                             Text("게시")
                                 .foregroundColor(Color.gray_bottom_text)
@@ -160,8 +143,8 @@ struct SponsoredDetailView: View {
     }
 }
 
-struct SponsoredDetailView_Previews: PreviewProvider {
+struct ShowPostedView_Previews: PreviewProvider {
     static var previews: some View {
-        SponsoredDetailView()
+        ShowPostedView(title: .constant("title"), description: .constant("description"), date: .constant("now"))
     }
 }

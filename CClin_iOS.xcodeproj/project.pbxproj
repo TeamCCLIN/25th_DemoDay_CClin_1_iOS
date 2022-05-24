@@ -48,6 +48,8 @@
 		748242292838D0FE00BA2023 /* NotificationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748242282838D0FE00BA2023 /* NotificationRowView.swift */; };
 		7482422B2838DC1D00BA2023 /* NotificationMyPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482422A2838DC1D00BA2023 /* NotificationMyPostView.swift */; };
 		748242312838E09400BA2023 /* NotifiacationMyCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748242302838E09400BA2023 /* NotifiacationMyCommentView.swift */; };
+		748DC6F5283CF69D000E8AD0 /* PostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DC6F4283CF69D000E8AD0 /* PostingView.swift */; };
+		748DC6F7283CFEEF000E8AD0 /* ShowPostedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DC6F6283CFEEF000E8AD0 /* ShowPostedView.swift */; };
 		74AB014E2833BB1200996486 /* SponsoredRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB014D2833BB1200996486 /* SponsoredRowView.swift */; };
 		74AB015B2833E04300996486 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB015A2833E04300996486 /* UserModel.swift */; };
 		74AB015F2833EEE400996486 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AB015E2833EEE400996486 /* API.swift */; };
@@ -116,6 +118,8 @@
 		748242282838D0FE00BA2023 /* NotificationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRowView.swift; sourceTree = "<group>"; };
 		7482422A2838DC1D00BA2023 /* NotificationMyPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMyPostView.swift; sourceTree = "<group>"; };
 		748242302838E09400BA2023 /* NotifiacationMyCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiacationMyCommentView.swift; sourceTree = "<group>"; };
+		748DC6F4283CF69D000E8AD0 /* PostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingView.swift; sourceTree = "<group>"; };
+		748DC6F6283CFEEF000E8AD0 /* ShowPostedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPostedView.swift; sourceTree = "<group>"; };
 		74AB014D2833BB1200996486 /* SponsoredRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsoredRowView.swift; sourceTree = "<group>"; };
 		74AB015A2833E04300996486 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		74AB015E2833EEE400996486 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -302,6 +306,8 @@
 				74548E75283B6E6900F3802A /* SponsoredFrontRowView.swift */,
 				74548E77283B7A3100F3802A /* SponsoredDetailView.swift */,
 				74548E79283B7CA200F3802A /* CommentView.swift */,
+				748DC6F4283CF69D000E8AD0 /* PostingView.swift */,
+				748DC6F6283CFEEF000E8AD0 /* ShowPostedView.swift */,
 			);
 			path = " SponsoredView";
 			sourceTree = "<group>";
@@ -581,6 +587,7 @@
 				7457C49D282E5D1D008E7CA5 /* CheckboxToggleStyle.swift in Sources */,
 				74510331282E50120022F444 /* LargeButton.swift in Sources */,
 				74B6BCCD2838A34500168B31 /* HotProjectRowView.swift in Sources */,
+				748DC6F7283CFEEF000E8AD0 /* ShowPostedView.swift in Sources */,
 				74793E2E283292A5008CE9F3 /* SelectRegisterTypeView.swift in Sources */,
 				74B6BCC22837B2B100168B31 /* ClubMyPageView.swift in Sources */,
 				74510329282C0A320022F444 /* Color+hex.swift in Sources */,
@@ -590,6 +597,7 @@
 				74510320282C08B90022F444 /* CClin_iOS.xcdatamodeld in Sources */,
 				74B6BCAD28366D0F00168B31 /* RealmUserModel.swift in Sources */,
 				006148BD2838CE8900C48F2C /* PartnerListView.swift in Sources */,
+				748DC6F5283CF69D000E8AD0 /* PostingView.swift in Sources */,
 				74B6BCC928389B2B00168B31 /* NewAlliance.swift in Sources */,
 				7482421A2838AF4000BA2023 /* HotCompanyRowView.swift in Sources */,
 				7457C49F282E6DE1008E7CA5 /* TermView.swift in Sources */,
