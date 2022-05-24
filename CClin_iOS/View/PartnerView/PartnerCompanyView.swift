@@ -66,80 +66,135 @@ struct PartnerCompanyView: View {
         .padding(.top, 10)
         
         VStack {
-            HStack {
-                Capsule()
-                    .stroke(Color(hex: "EFEFEF"))
-                    .frame(width: 81, height: 25, alignment: .leading)
-                    .overlay(
-                        HStack {
-                            Text("카테고리")
-                                .font(.system(size: 11))
-                            Image(systemName: "chevron.down")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(height: 3)
-                        })
-                
-                Capsule()
-                    .stroke(Color(hex: "EFEFEF"))
-                    .frame(width: 40, height: 25, alignment: .leading)
-                    .overlay(
-                        HStack {
-                            Text("경쟁")
-                                .font(.system(size: 11))
-                                .foregroundColor(Color(hex: "ADADAD"))
-                        })
-                
-                Capsule()
-                    .stroke(Color(hex: "EFEFEF"))
-                    .frame(width: 70, height: 25, alignment: .leading)
-                    .overlay(
-                        HStack {
-                            Text("인재 채용")
-                                .font(.system(size: 11))
-                                .foregroundColor(Color(hex: "ADADAD"))
-                        })
-                
-                Capsule()
-                    .stroke(Color(hex: "EFEFEF"))
-                    .frame(width: 80, height: 25, alignment: .leading)
-                    .overlay(
-                        HStack {
-                            Text("아이디어 공모")
-                                .font(.system(size: 11))
-                                .foregroundColor(Color(hex: "ADADAD"))
-                        })
-                
-                Spacer()
-                
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    Capsule()
+                        .stroke(Color(hex: "EFEFEF"))
+                        .frame(width: 81, height: 25, alignment: .leading)
+                        .overlay(
+                            HStack {
+                                Text("카테고리")
+                                    .font(.system(size: 11))
+                                Image(systemName: "chevron.down")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: 3)
+                            })
+                    
+                    Capsule()
+                        .stroke(Color(hex: "EFEFEF"))
+                        .frame(width: 40, height: 25, alignment: .leading)
+                        .overlay(
+                            HStack {
+                                Text("교육")
+                                    .font(.system(size: 11))
+                                    .foregroundColor(Color(hex: "ADADAD"))
+                            })
+                    
+                    Capsule()
+                        .stroke(Color(hex: "EFEFEF"))
+                        .frame(width: 65, height: 25, alignment: .leading)
+                        .overlay(
+                            HStack {
+                                Text("예술/문화")
+                                    .font(.system(size: 11))
+                                    .foregroundColor(Color(hex: "ADADAD"))
+                            })
+                    
+                    Capsule()
+                        .stroke(Color(hex: "EFEFEF"))
+                        .frame(width: 40, height: 25, alignment: .leading)
+                        .overlay(
+                            HStack {
+                                Text("건설")
+                                    .font(.system(size: 11))
+                                    .foregroundColor(Color(hex: "ADADAD"))
+                            })
+                    
+                    Capsule()
+                        .stroke(Color(hex: "EFEFEF"))
+                        .frame(width: 80, height: 25, alignment: .leading)
+                        .overlay(
+                            HStack {
+                                Text("IT 서비스")
+                                    .font(.system(size: 11))
+                                    .foregroundColor(Color(hex: "ADADAD"))
+                            })
+                    
+                    Capsule()
+                        .stroke(Color(hex: "EFEFEF"))
+                        .frame(width: 40, height: 25, alignment: .leading)
+                        .overlay(
+                            HStack {
+                                Text("제조")
+                                    .font(.system(size: 11))
+                                    .foregroundColor(Color(hex: "ADADAD"))
+                            })
+                    
+                    Capsule()
+                        .stroke(Color(hex: "EFEFEF"))
+                        .frame(width: 60, height: 25, alignment: .leading)
+                        .overlay(
+                            HStack {
+                                Text("농어업")
+                                    .font(.system(size: 11))
+                                    .foregroundColor(Color(hex: "ADADAD"))
+                            })
+                    
+                    
+                    Capsule()
+                        .stroke(Color(hex: "EFEFEF"))
+                        .frame(width: 90, height: 25, alignment: .leading)
+                        .overlay(
+                            HStack {
+                                Text("숙박 및 음식점")
+                                    .font(.system(size: 11))
+                                    .foregroundColor(Color(hex: "ADADAD"))
+                            })
+                    
+                    Capsule()
+                        .stroke(Color(hex: "EFEFEF"))
+                        .frame(width: 40, height: 25, alignment: .leading)
+                        .overlay(
+                            HStack {
+                                Text("기타")
+                                    .font(.system(size: 11))
+                                    .foregroundColor(Color(hex: "ADADAD"))
+                            })
+                    
+                    Spacer()
+                    
+                }
             }
+            
         }
         
-        VStack{
-            List {
-                ForEach(0..<2) { i in
-                    partnerAlliance(imgaeUrl: "hot_project", category: "#IT서비스", title: "(주)고퀄", projectDescription: "누구나 쉽게 스마트홈을 누릴 수 있도록 스마트홈 IoT의 대중화를 이끌다")
+        
+        List {
+            ForEach(0..<2) { i in
+                HStack {
+                    partnerAlliance(imgaeUrl: "company_1", category: "#IT서비스", title: "(주)고퀄", projectDescription: "누구나 쉽게 스마트홈을 누릴 수 있도록 스마트홈 IoT의 대중화를 이끌다")
                         .cornerRadius(7)
                         .listRowSeparator(.hidden)
-                    partnerAlliance(imgaeUrl: "hot_project", category: "#교육 #보건/사회복지", title: "(주)트로스트", projectDescription: "셀프케어, 심리상담, 심리워크샵, 명상, ASMR 사운드, AI챗봇, 정신과 병원·약물 정보까지. 트로스트에서 나에게 꼭 맞는 방법으로 일상 상황의 마음을 관리해봐!")
+                    partnerAlliance(imgaeUrl: "company_2", category: "#교육 #보건/사회복지", title: "(주)트로스트", projectDescription: "셀프케어 등을 트로스트에서 나에게 꼭 맞는 방법으로 관리해봐!")
                     //.padding(.bottom, 10)
                         .cornerRadius(7)
                         .listRowSeparator(.hidden)
-                    partnerAlliance(imgaeUrl: "hot_project", category: "#경쟁 #아이디어 공모 #브랜드 홍보 #기획", title: "(주)카카오페이", projectDescription: "송금, 결제, 멤버십으로 생활하다. 시간/장소 걱정없이 돈을 보내고, 필요한 것은 바로 사고")
+                }
+                
+                HStack {
+                    partnerAlliance(imgaeUrl: "company_4", category: "#예술/문화", title: "(주)퍼블리", projectDescription: "당신 곁의 랜선 사수, 퍼블리입니다.")
                     //.padding(.bottom, 10)
                         .cornerRadius(7)
                         .listRowSeparator(.hidden)
-                    partnerAlliance(imgaeUrl: "hot_project", category: "#인재 채용 #아이디어 공모 #UI/UX", title: "(주)컬리", projectDescription: "2015년 서비스 런칭 이후, 국내에서 가장 빠른 배송 서비스, 미식가와 주부들을 사로잡은")
-                    //.padding(.bottom, 10)
-                        .cornerRadius(7)
-                        .listRowSeparator(.hidden)
-                    partnerAlliance(imgaeUrl: "hot_project", category: "#앱 UI 개선안 #프로젝트 공모", title: "(주)무신사", projectDescription: "무신사는 700만 회원을 보유한 국내 1위 온라인 패션 플랫폼입니다. 스트릿, 글로벌 명품")
+                    partnerAlliance(imgaeUrl: "company_5", category: "#교육", title: "(주)레디미", projectDescription: "커리어 니즈를 반영한 채용 연계 프로세스를 제공하다.")
                     //.padding(.bottom, 10)
                         .cornerRadius(7)
                         .listRowSeparator(.hidden)
                 }
             }
         }
+        .padding(.horizontal, -15)
         .listStyle(.plain)
     }
 }

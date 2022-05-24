@@ -76,9 +76,9 @@ struct TabBarButton: View {
     var body: some View {
         Text(text)
         //.fontWeight(isSelected ? .heavy : .regular)
-            .font(SpoqaHanSansNeo.bold(size: 15))
-        //.padding(.bottom, 10)
-            .border(width: isSelected ? 2 : 1, edges: [.bottom], color: .black)
+            .font(SpoqaHanSansNeo.bold(size: 17))
+            .padding(.bottom, 10)
+            .border(width: isSelected ? 3 : 1, edges: [.bottom], color: Color.yellow_line)
     }
 }
 
@@ -92,7 +92,7 @@ struct CustomTopTabBar: View {
                 .onTapGesture { onButtonTapped(index: 1) }
             Spacer()
         }
-        .border(width: 1, edges: [.bottom], color: .black)
+        .border(width: 1, edges: [.bottom], color: Color.gray_button_line)
     }
     
     private func onButtonTapped(index: Int) {
