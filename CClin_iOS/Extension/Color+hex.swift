@@ -29,4 +29,6 @@ extension Color {
     static let gray_text =  Color(hex: "898989")
     static let gray_button_line =  Color(hex: "EFEFEF")
     static let gray_bottom_text =  Color(hex: "A6A6A6")
+    static let white_line = Color(hex: "ffffff")
+    static let yellow_line = Color(hex: "FFDA00")
 }

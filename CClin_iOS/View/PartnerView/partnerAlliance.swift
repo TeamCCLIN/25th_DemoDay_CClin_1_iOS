@@ -20,7 +20,7 @@ struct partnerAlliance: View {
                     HStack {
                         Image(imgaeUrl)
                             .resizable()
-                            .frame(width: 200, height: 90)
+                            .frame(width: 150, height: 150)
                             .cornerRadius(5)
                             .padding(.trailing, 10)
                         Spacer()
@@ -55,8 +55,9 @@ struct partnerAlliance: View {
             }
             
             Rectangle()
-                .frame(height:1)
-                .foregroundColor(Color.gray_button_line)
+             .frame(height:1)
+             .foregroundColor(Color.white_line)
+             
         }
     }
 }
