@@ -55,8 +55,9 @@ struct partnerAlliance: View {
             }
             
             Rectangle()
-                .frame(height:1)
-                .foregroundColor(Color.white_line)
+             .frame(height:1)
+             .foregroundColor(Color.white_line)
+             
         }
     }
 }

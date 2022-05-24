@@ -75,7 +75,6 @@ struct TabBarButton: View {
     @Binding var isSelected: Bool
     var body: some View {
         Text(text)
-        //.fontWeight(isSelected ? .heavy : .regular)
             .font(SpoqaHanSansNeo.bold(size: 17))
             .padding(.bottom, 10)
             .border(width: isSelected ? 3 : 1, edges: [.bottom], color: Color.yellow_line)

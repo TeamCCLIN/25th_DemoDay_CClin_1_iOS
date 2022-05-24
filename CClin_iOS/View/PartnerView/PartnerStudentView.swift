@@ -169,6 +169,7 @@ struct PartnerStudentView: View {
                         .cornerRadius(7)
                         .listRowSeparator(.hidden)
                 }
+                .listRowSeparator(.hidden)
                 
                 HStack {
                     partnerAlliance(imgaeUrl: "student_3", category: "#IT/기술", title: "멋쟁이 사자처럼", projectDescription: "2013년 이두희가 설립한 프로그래밍 교육단체로, 소프트웨어 비전공자들도 프로그래밍")
@@ -181,6 +182,7 @@ struct PartnerStudentView: View {
                         .cornerRadius(7)
                         .listRowSeparator(.hidden)
                 }
+                .listRowSeparator(.hidden)
             }
         }
         .padding(.horizontal, -15)

@@ -181,6 +181,8 @@ struct PartnerCompanyView: View {
                         .cornerRadius(7)
                         .listRowSeparator(.hidden)
                 }
+                .listRowSeparator(.hidden)
+                 
                 
                 HStack {
                     partnerAlliance(imgaeUrl: "company_4", category: "#예술/문화", title: "(주)퍼블리", projectDescription: "당신 곁의 랜선 사수, 퍼블리입니다.")
@@ -192,6 +194,8 @@ struct PartnerCompanyView: View {
                         .cornerRadius(7)
                         .listRowSeparator(.hidden)
                 }
+                .listRowSeparator(.hidden)
+                 
             }
         }
         .padding(.horizontal, -15)
