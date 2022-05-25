@@ -62,6 +62,8 @@
 		74B6BCC728389AF900168B31 /* ClubHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6BCC628389AF900168B31 /* ClubHomeView.swift */; };
 		74B6BCC928389B2B00168B31 /* NewAlliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6BCC828389B2B00168B31 /* NewAlliance.swift */; };
 		74B6BCCD2838A34500168B31 /* HotProjectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6BCCC2838A34500168B31 /* HotProjectRowView.swift */; };
+		942AD3E2283E8F3600049AE8 /* ClubDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942AD3E1283E8F3600049AE8 /* ClubDetailView.swift */; };
+		942AD3E4283E8F4900049AE8 /* CompanyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942AD3E3283E8F4900049AE8 /* CompanyDetailView.swift */; };
 		ECFE46911D8E56447EF26F93 /* Pods_CClin_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9BD1C3073708F23F2D4FB2 /* Pods_CClin_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +127,8 @@
 		74B6BCC628389AF900168B31 /* ClubHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubHomeView.swift; sourceTree = "<group>"; };
 		74B6BCC828389B2B00168B31 /* NewAlliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlliance.swift; sourceTree = "<group>"; };
 		74B6BCCC2838A34500168B31 /* HotProjectRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProjectRowView.swift; sourceTree = "<group>"; };
+		942AD3E1283E8F3600049AE8 /* ClubDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailView.swift; sourceTree = "<group>"; };
+		942AD3E3283E8F4900049AE8 /* CompanyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailView.swift; sourceTree = "<group>"; };
 		C10F2192C0D7BB381CBC878A /* Pods-CClin_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CClin_iOS.debug.xcconfig"; path = "Target Support Files/Pods-CClin_iOS/Pods-CClin_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +220,7 @@
 		74510326282C09D70022F444 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				942AD3E0283E8F1F00049AE8 /* DetailView */,
 				006148B92838CE5E00C48F2C /* PartnerView */,
 				006148B82838CE4600C48F2C /* ProjectView */,
 				74510315282C08B70022F444 /* ContentView.swift */,
@@ -406,6 +411,15 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
+		942AD3E0283E8F1F00049AE8 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				942AD3E1283E8F3600049AE8 /* ClubDetailView.swift */,
+				942AD3E3283E8F4900049AE8 /* CompanyDetailView.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
 		C6FD2D499023DB2D54E6D3AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,7 +590,9 @@
 				74AB014E2833BB1200996486 /* SponsoredRowView.swift in Sources */,
 				7457C49B282E51ED008E7CA5 /* RoundTextFieldStyle.swift in Sources */,
 				74B6BCC728389AF900168B31 /* ClubHomeView.swift in Sources */,
+				942AD3E4283E8F4900049AE8 /* CompanyDetailView.swift in Sources */,
 				74AB015F2833EEE400996486 /* API.swift in Sources */,
+				942AD3E2283E8F3600049AE8 /* ClubDetailView.swift in Sources */,
 				74510314282C08B70022F444 /* CClin_iOSApp.swift in Sources */,
 				748242272838D0EC00BA2023 /* NotificationAllView.swift in Sources */,
 				74B6BCAF283795EE00168B31 /* ProgressBar.swift in Sources */,
