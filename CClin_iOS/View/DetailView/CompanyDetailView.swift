@@ -39,14 +39,13 @@ struct CompanyDetailView: View{
                     Image(systemName: "heart.fill")
                         .foregroundColor(Color.main_club)
                     
-                    Text("찜한 목록")
+                    Text("기업 소개")
                         .font(SpoqaHanSansNeo.medium(size: 10))
                     
                     Spacer()
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
-                .background(Color.gray_bottom)
                 .cornerRadius(7)
             }
     }
