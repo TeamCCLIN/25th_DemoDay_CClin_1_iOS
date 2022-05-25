@@ -47,6 +47,15 @@ struct ClubDetailView: View{
                 .padding()
                 .frame(maxWidth: .infinity)
                 .cornerRadius(7)
+                
+                VStack {
+                HStack(spacing:10) {
+                    Text("우리 단체는 기업측에서 26번의 제의가 왔어요")
+                        .font(SpoqaHanSansNeo.medium(size: 10))
+                    
+                    Spacer()
+                }
+            }
             }
     }
 }

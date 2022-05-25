@@ -159,7 +159,9 @@
 				006148BC2838CE8900C48F2C /* PartnerListView.swift */,
 				00820E2A2838E82D005891D3 /* partnerAlliance.swift */,
 				009B696C283B78ED0062459C /* PartnerCompanyView.swift */,
+				942AD3E3283E8F4900049AE8 /* CompanyDetailView.swift */,
 				009B696E283B78FB0062459C /* PartnerStudentView.swift */,
+				942AD3E1283E8F3600049AE8 /* ClubDetailView.swift */,
 			);
 			path = PartnerView;
 			sourceTree = "<group>";
@@ -220,7 +222,6 @@
 		74510326282C09D70022F444 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				942AD3E0283E8F1F00049AE8 /* DetailView */,
 				006148B92838CE5E00C48F2C /* PartnerView */,
 				006148B82838CE4600C48F2C /* ProjectView */,
 				74510315282C08B70022F444 /* ContentView.swift */,
@@ -409,15 +410,6 @@
 				748242192838AF4000BA2023 /* HotCompanyRowView.swift */,
 			);
 			path = HomeView;
-			sourceTree = "<group>";
-		};
-		942AD3E0283E8F1F00049AE8 /* DetailView */ = {
-			isa = PBXGroup;
-			children = (
-				942AD3E1283E8F3600049AE8 /* ClubDetailView.swift */,
-				942AD3E3283E8F4900049AE8 /* CompanyDetailView.swift */,
-			);
-			path = DetailView;
 			sourceTree = "<group>";
 		};
 		C6FD2D499023DB2D54E6D3AD /* Frameworks */ = {
