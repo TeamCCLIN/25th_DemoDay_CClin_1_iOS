@@ -53,12 +53,12 @@ struct ClubMyPageView: View {
                     .frame(height: 1)
                     .padding(.top, 275)
                     .padding(.horizontal, 33)
-           }
+            }
             
             VStack {
                 HStack {
-                Text("나의 프로젝트")
-                    .font(SpoqaHanSansNeo.medium(size: 15))
+                    Text("나의 프로젝트")
+                        .font(SpoqaHanSansNeo.medium(size: 15))
                     
                     Spacer()
                 }
@@ -75,6 +75,7 @@ struct ClubMyPageView: View {
                             .foregroundColor(Color(hex: "9E9E9E"))
                         
                         Text("1")
+                            .foregroundColor(Color.black)
                             .font(SpoqaHanSansNeo.bold(size: 13))
                     }
                     
@@ -89,6 +90,7 @@ struct ClubMyPageView: View {
                             .foregroundColor(Color(hex: "9E9E9E"))
                         
                         Text("0")
+                            .foregroundColor(Color.black)
                             .font(SpoqaHanSansNeo.bold(size: 13))
                     }
                     
@@ -103,61 +105,63 @@ struct ClubMyPageView: View {
                             .foregroundColor(Color(hex: "9E9E9E"))
                         
                         Text("0")
+                            .foregroundColor(Color.black)
                             .font(SpoqaHanSansNeo.bold(size: 13))
                     }
                 }
                 .padding()
+                
             }
             .padding(.bottom, 23)
             
             VStack(spacing: 13) {
-            HStack {
-                Button {
-                    //
-                } label: {
-                    Text("찜한 목록")
-                        .foregroundColor(Color.black)
-                        .font(SpoqaHanSansNeo.medium(size: 15))
+                HStack {
+                    Button {
+                        //
+                    } label: {
+                        Text("찜한 목록")
+                            .foregroundColor(Color.black)
+                            .font(SpoqaHanSansNeo.medium(size: 15))
+                    }
+                    
+                    Spacer()
                 }
+                .padding()
+                .frame(height:55)
+                .background(Color.gray_bottom)
+                .cornerRadius(7)
                 
-                Spacer()
-            }
-            .padding()
-            .frame(height:55)
-            .background(Color.gray_bottom)
-            .cornerRadius(7)
-            
-            HStack {
-                Button {
-                    //
-                } label: {
-                    Text("문의사항")
-                        .foregroundColor(Color.black)
-                        .font(SpoqaHanSansNeo.medium(size: 15))
+                HStack {
+                    Button {
+                        //
+                    } label: {
+                        Text("문의사항")
+                            .foregroundColor(Color.black)
+                            .font(SpoqaHanSansNeo.medium(size: 15))
+                    }
+                    
+                    Spacer()
                 }
+                .padding()
+                .frame(height:55)
+                .background(Color.gray_bottom)
+                .cornerRadius(7)
                 
-                Spacer()
-            }
-            .padding()
-            .frame(height:55)
-            .background(Color.gray_bottom)
-            .cornerRadius(7)
-            
-            HStack {
-                Button {
-                    //
-                } label: {
-                    Text("개인정보 처리방침")
-                        .foregroundColor(Color.black)
-                        .font(SpoqaHanSansNeo.medium(size: 15))
+                HStack {
+                    Button {
+                        //
+                    } label: {
+                        Text("개인정보 처리방침")
+                            .foregroundColor(Color.black)
+                            .font(SpoqaHanSansNeo.medium(size: 15))
+                    }
+                    
+                    Spacer()
                 }
-                
-                Spacer()
-            }
-            .padding()
-            .frame(height:55)
-            .background(Color.gray_bottom)
-            .cornerRadius(7)
+                .padding()
+                .frame(height:55)
+                .background(Color.gray_bottom)
+                .cornerRadius(7)
             }
             
             Spacer()

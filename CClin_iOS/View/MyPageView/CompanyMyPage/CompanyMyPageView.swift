@@ -13,6 +13,7 @@ struct CompanyMyPageView: View {
     
     @State var isNotificationViewActive: Bool = false
     @State var isKeepViewActive: Bool = false
+    @State var isMyProjectViewActive: Bool = false
     
     var body: some View {
         VStack() {
@@ -65,51 +66,66 @@ struct CompanyMyPageView: View {
                     
                     Spacer()
                 }
-                
-                HStack(spacing:67) {
-                    VStack(spacing:6) {
-                        Image("ic_waiting_blue")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(height:28)
+                Button {
+                    isMyProjectViewActive = true
+                } label: {
+                    HStack(spacing:67) {
+                        VStack(spacing:6) {
+                            Image("ic_waiting_blue")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height:28)
+                            
+                            Text("선정 중")
+                                .font(SpoqaHanSansNeo.medium(size: 11))
+                                .foregroundColor(Color(hex: "9E9E9E"))
+                            
+                            Text("1")
+                                .foregroundColor(Color.black)
+                                .font(SpoqaHanSansNeo.bold(size: 13))
+                        }
                         
-                        Text("선정 대기")
-                            .font(SpoqaHanSansNeo.medium(size: 11))
-                            .foregroundColor(Color(hex: "9E9E9E"))
+                        VStack(spacing:6) {
+                            Image("ic_proceeding")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height:29)
+                            
+                            Text("진행 중")
+                                .font(SpoqaHanSansNeo.medium(size: 11))
+                                .foregroundColor(Color(hex: "9E9E9E"))
+                            
+                            Text("0")
+                                .foregroundColor(Color.black)
+                                .font(SpoqaHanSansNeo.bold(size: 13))
+                        }
                         
-                        Text("1")
-                            .font(SpoqaHanSansNeo.bold(size: 13))
+                        VStack(spacing:6) {
+                            Image("ic_complete")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height:26)
+                            
+                            Text("진행 완료")
+                                .font(SpoqaHanSansNeo.medium(size: 11))
+                                .foregroundColor(Color(hex: "9E9E9E"))
+                            
+                            Text("0")
+                                .foregroundColor(Color.black)
+                                .font(SpoqaHanSansNeo.bold(size: 13))
+                        }
                     }
-                    
-                    VStack(spacing:6) {
-                        Image("ic_proceeding")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(height:29)
-                        
-                        Text("진행중")
-                            .font(SpoqaHanSansNeo.medium(size: 11))
-                            .foregroundColor(Color(hex: "9E9E9E"))
-                        
-                        Text("0")
-                            .font(SpoqaHanSansNeo.bold(size: 13))
-                    }
-                    
-                    VStack(spacing:6) {
-                        Image("ic_complete")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(height:26)
-                        
-                        Text("진행완료")
-                            .font(SpoqaHanSansNeo.medium(size: 11))
-                            .foregroundColor(Color(hex: "9E9E9E"))
-                        
-                        Text("0")
-                            .font(SpoqaHanSansNeo.bold(size: 13))
-                    }
+                    .padding()
                 }
-                .padding()
+                .background(
+                    NavigationLink(isActive: $isMyProjectViewActive, destination: {
+                        MyProjectView()
+                    }, label: {
+                        EmptyView()
+                    })
+                )
+
+               
             }
             .padding(.bottom, 23)
             
