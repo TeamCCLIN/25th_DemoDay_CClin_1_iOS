@@ -36,6 +36,7 @@ struct partnerAlliance: View {
                     
                     HStack {
                         Text(title)
+                            .foregroundColor(Color.black)
                             .font(SpoqaHanSansNeo.bold(size: 15))
                             .padding(.bottom, 8)
                         

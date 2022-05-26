@@ -27,6 +27,7 @@ struct PartnerListView: View {
                 
                 VStack{
                     CustomTopTabBar(tabIndex: $tabIndex)
+                                    .padding(.horizontal, 30)
                     if tabIndex == 0 {
                         PartnerCompanyView()
                     }
@@ -35,24 +36,22 @@ struct PartnerListView: View {
                     }
                     Spacer()
                 }
-                //.frame(width: UIScreen.main.bounds.width - 24, alignment: .center)
-                .padding(.horizontal, 30)
+
                 .listStyle(.plain)
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarBackButtonHidden(true)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItem(placement: .principal) {
                         Text("끌린파트너")
                             .foregroundColor(Color.black)
                             .font(SpoqaHanSansNeo.bold(size: 20))
-                            .padding(.leading, 15)
                     }
                     
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
                             isMyPageViewActive = true
                         } label: {
-                            Image(systemName: "person.crop.circle")
+                            Image("ic_mypage")
                                 .padding(.trailing, 15)
                         }
                         .background(

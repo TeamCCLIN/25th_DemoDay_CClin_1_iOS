@@ -20,9 +20,10 @@ struct ParticipatedClubView: View {
     
     @State var selectedClubList: [String] = []
     @State var isShowPopUp: Bool = false
+    @State var isPostedApplyProjectViewActive: Bool = false
     
     var body: some View {
-        ZStack() {
+        ZStack {
             ZStack(alignment: .bottom) {
                 ScrollView {
                     VStack {

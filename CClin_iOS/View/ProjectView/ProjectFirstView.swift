@@ -187,7 +187,8 @@ struct ProjectFirstView: View {
                     }
                     .background(
                         NavigationLink(isActive: $isMyPageViewActive, destination: {
-                            ClubMyPageView()
+//                            ClubMyPageView()
+                            ProjectApplyView()
                         }, label: {
                             EmptyView()
                         })
