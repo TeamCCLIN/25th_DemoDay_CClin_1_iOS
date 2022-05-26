@@ -14,6 +14,9 @@ struct ProjectFirstView: View {
     @State var showPopularityOrder: Bool = false
     @State var showDeadlineOrder: Bool = false
     @State var isMyPageViewActive: Bool = false
+    @State var isMyProjectViewActive: Bool = false
+    @State var isProjectDetailViewActive: Bool = false
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -138,6 +141,17 @@ struct ProjectFirstView: View {
                         //.padding(.bottom, 10)
                             .cornerRadius(7)
                             .listRowSeparator(.hidden)
+                            .background(
+                                NavigationLink(isActive: $isProjectDetailViewActive, destination: {
+                                    ProjectDetailView()
+                                }, label: {
+                                    EmptyView()
+                                })
+                            )}
+                        
+                        
+                        
+                        
                         projectAlliance(imgaeUrl: "project_2", category: "#인재 채용 #아이디어 공모 #UI/UX", title: "다수의 이동체 관제 모니터링 화면 UI/UX 최적화 방안 공모", companyName: "(주)파블로항공")
                         //.padding(.bottom, 10)
                             .cornerRadius(7)
@@ -186,9 +200,8 @@ struct ProjectFirstView: View {
                             .padding(.trailing, 15)
                     }
                     .background(
-                        NavigationLink(isActive: $isMyPageViewActive, destination: {
-//                            ClubMyPageView()
-                            ProjectApplyView()
+                        NavigationLink(isActive: $isMyProjectViewActive, destination: {
+                            MyProjectView()
                         }, label: {
                             EmptyView()
                         })
@@ -197,7 +210,7 @@ struct ProjectFirstView: View {
             }
         }
     }
-}
+
 
 struct ProjectFirstView_Previews: PreviewProvider {
     static var previews: some View {

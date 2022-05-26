@@ -10,8 +10,94 @@ import SwiftUI
 struct ProjectDetailView: View {
     
     @State var isMyPageViewActive: Bool = false
+    @State var isProjectApplyViewActive: Bool = false
+    
     var body: some View {
         ScrollView() {
+            ZStack {
+                Image("background_project")
+                ZStack(alignment: .bottom) {
+                    ScrollView {
+                        VStack {
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    Text("D-30")
+                                        .foregroundColor(Color.black)
+                                        .font(SpoqaHanSansNeo.bold(size: 20))
+                                        .padding(.vertical, 10)
+                                        .padding(.horizontal, 20)
+                                        .background(RoundedRectangle(cornerRadius: 5)
+                                        .foregroundColor(Color(hex: "E0E0E0")))
+                                    Spacer()
+                                }
+                                .padding(.bottom, 10)
+                                .padding(.top, 20)
+                                .navigationBarTitleDisplayMode(.inline)
+                                .ignoresSafeArea()
+                                
+                                Text("# 경쟁   # 아이디어 공모   # 브랜드 홍보   # 기획")
+                                    .foregroundColor(Color.white)
+                                    .font(SpoqaHanSansNeo.bold(size: 13))
+                                    .padding(.bottom, 3)
+
+                                Text("IoT 서비스의 페르소나 설계 및 \n기획전 아이디어 공모")
+                                    .font(SpoqaHanSansNeo.bold(size: 17))
+                                    .foregroundColor(Color.white)
+                                    .padding(.bottom, 15)
+
+                                Text("(주)고퀄")
+                                    .foregroundColor(Color.white)
+                                    .font(SpoqaHanSansNeo.medium(size: 13))
+                            }.padding(.bottom, 20)
+                             .padding(.horizontal, 25)
+                             .navigationBarTitleDisplayMode(.inline)
+                             .ignoresSafeArea()
+                            .toolbar{
+                                ToolbarItem(placement: .principal) {
+                                    Text("프로젝트")
+                                        .foregroundColor(Color.black)
+                                        .font(SpoqaHanSansNeo.bold(size: 20))
+                                        .padding(.leading, 15)
+                                    
+                                }
+
+                                ToolbarItem(placement: .navigationBarTrailing) {
+                                    Button {} label: {
+                                        Image("ic_mypage")
+                                            .padding(.trailing, 15)
+                                        
+                                    }
+                                    
+                                }
+
+                                ToolbarItem(placement: .navigationBarTrailing){
+                                    Button{
+                                        isMyPageViewActive = true
+                                        
+                                    } label: {
+                                        Image(systemName: "person.crop.circle")
+                                            .padding(.trailing, 15)
+                                        
+                                    }
+                                    .background(
+                                        NavigationLink(isActive: $isMyPageViewActive, destination: {
+                                            MyProjectView()
+                                        }, label: {
+                                            EmptyView()
+                                            
+                                        })
+                                    )}
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
             VStack {
                 
                 HStack {
@@ -51,7 +137,7 @@ struct ProjectDetailView: View {
                     
                     Spacer()
                     
-                    VStack(alignment: .trailing) {
+                    VStack(alignment: .leading) {
                         Text("신청")
                             .font(SpoqaHanSansNeo.bold(size: 13))
                             .foregroundColor(Color(hex: "474646"))
@@ -89,7 +175,7 @@ struct ProjectDetailView: View {
             VStack {
                 HStack {
                     Spacer()
-                    VStack(alignment: .trailing) {
+                    VStack(alignment: .leading) {
                         Text("진행기간")
                             .font(SpoqaHanSansNeo.bold(size: 13))
                             .foregroundColor(Color(hex: "474646"))
@@ -131,7 +217,7 @@ struct ProjectDetailView: View {
                     
                     Spacer()
                     
-                    VStack(alignment: .trailing) {
+                    VStack(alignment: .leading) {
                         Text("STEP 1_헤이홈 페르소나 설계")
                             .foregroundColor(Color.black)
                             .font(SpoqaHanSansNeo.bold(size: 13))
@@ -178,7 +264,7 @@ struct ProjectDetailView: View {
                     
                     Spacer()
                     
-                    VStack(alignment: .trailing) {
+                    VStack(alignment: .leading) {
                         Text("IoT 서비스 헤이홈 게시용 공고.pdf")
                             .foregroundColor(Color(hex: "F27953"))
                             .font(SpoqaHanSansNeo.bold(size: 13))
@@ -229,21 +315,29 @@ struct ProjectDetailView: View {
             Spacer()
             
             VStack {
-                Button(action: {}) {
                     Text("프로젝트 신청하기")
                         .foregroundColor(Color.white)
                         .font(SpoqaHanSansNeo.bold(size: 13))
+                        LargeButton(title: "프로젝트 신청하기", backgroundColor: Color.main_club, foregroundColor: Color.white) {
+                                 isProjectApplyViewActive = true
+                        }
+                        .tint(Color.main_club)
+                        .buttonStyle(.borderedProminent)
+                        .buttonBorderShape(.automatic)
+                        .controlSize(.large)
+                        .background(
+                        NavigationLink(isActive: $isProjectApplyViewActive, destination: {
+                                     ProjectApplyView()
+                                 }, label: {
+                                     EmptyView()
+                                 })
+                        )}.padding(30)
+                    }
                 }
-                .tint(Color.main_club)
-                .buttonStyle(.borderedProminent)
-                .buttonBorderShape(.automatic)
-                .controlSize(.large)
-            }
-        }
-        
         
     }
-}
+
+
 
 struct ProjectDetailView_Previews: PreviewProvider {
     static var previews: some View {
