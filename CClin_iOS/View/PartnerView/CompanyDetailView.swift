@@ -1,5 +1,5 @@
 //
-//  ClubDetailView.swift
+//  CompanyDetailView.swift
 //  CClin_iOS
 //
 //  Created by 민경 on 2022/05/26.
@@ -7,30 +7,29 @@
 
 import SwiftUI
 
-struct ClubDetailView: View {
-    
+struct CompanyDetailView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     var body: some View {
         VStack() {
             ZStack
             {
-                Image("background_kusitms")
+                Image("background_goqual")
                 
                 HStack(spacing: 22) {
-                    Image("logo_kusitms")
+                    Image("logo_goqual")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 129)
                         .clipShape(Circle())
                     
                     VStack(alignment: .leading) {
-                        Text("IT•기술 | 회원 619명")
+                        Text("IT•웹•통신 | 스타트업")
                             .foregroundColor(Color.white)
                             .font(SpoqaHanSansNeo.medium(size: 11))
                         
                         HStack {
-                            Text("큐시즘")
+                            Text("고퀄")
                                 .foregroundColor(Color.white)
                                 .font(SpoqaHanSansNeo.bold(size: 30))
                                 .padding(.trailing, 90)
@@ -41,7 +40,7 @@ struct ClubDetailView: View {
                         }
                         .padding(.bottom, 20)
                         
-                        Text("기획자, 개발자, 디자이너가 모여 하나의 가치를 창조하는 IT서비스 학회")
+                        Text("누구나 쉽게 스마트홈을 누릴 수 있도록 스마트홈 IoT의 대중화를 이끌다")
                             .lineLimit(2)
                             .font(SpoqaHanSansNeo.medium(size: 11))
                             .padding(.bottom, 20)
@@ -59,3 +58,4 @@ struct ClubDetailView: View {
         }
     }
 }
+
