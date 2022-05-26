@@ -108,6 +108,35 @@ struct ProjectDetailView: View {
                     .foregroundColor(Color.gray_button_line)
                     .padding(.horizontal, 40)
             }
+            
+            VStack {
+                
+                HStack {
+                    Text("첨부파일")
+                        .font(SpoqaHanSansNeo.bold(size: 13))
+                        .foregroundColor(Color(hex: "474646"))
+                    
+                    Spacer()
+                    
+                    VStack {
+                        Text("IoT 서비스 헤이홈 게시용 공고.pdf")
+                            .foregroundColor(Color.orange)
+                            .font(SpoqaHanSansNeo.bold(size: 13))
+                        
+                        Spacer()
+                        
+                        Text("프로젝트 제출 양식.ppt")
+                            .foregroundColor(Color.orange)
+                            .font(SpoqaHanSansNeo.bold(size: 13))
+                    }
+                }
+                .padding(.horizontal, 40)
+                .padding(.vertical, 10)
+                
+                Rectangle()
+                    .frame(height:1)
+                    .foregroundColor(Color.gray_button_line)
+            }
         }
         
         
