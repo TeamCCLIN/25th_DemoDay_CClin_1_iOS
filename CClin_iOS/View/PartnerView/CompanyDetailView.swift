@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct CompanyDetailView: View {
+    
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
+    @State var isNotificationViewActive: Bool = false
+    @State var isKeepViewActive: Bool = false
+    @State var isMyProjectViewActive: Bool = false
     
     var body: some View {
         VStack() {
@@ -24,7 +29,7 @@ struct CompanyDetailView: View {
                         .clipShape(Circle())
                     
                     VStack(alignment: .leading) {
-                        Text("IT•웹•통신 | 스타트업")
+                        Text("IT•웹•통신  |  스타트업")
                             .foregroundColor(Color.white)
                             .font(SpoqaHanSansNeo.medium(size: 11))
                         
@@ -40,8 +45,7 @@ struct CompanyDetailView: View {
                         }
                         .padding(.bottom, 20)
                         
-                        Text("누구나 쉽게 스마트홈을 누릴 수 있도록 스마트홈 IoT의 대중화를 이끌다")
-                            .lineLimit(2)
+                        Text("누구나 쉽게 스마트홈을 누릴 수 있도록  스마트홈 IoT의 대중화를 이끌다")
                             .font(SpoqaHanSansNeo.medium(size: 11))
                             .padding(.bottom, 20)
                     }
@@ -54,8 +58,6 @@ struct CompanyDetailView: View {
                     .padding(.top, 275)
                     .padding(.horizontal, 33)
             }
-            
         }
     }
 }
-
