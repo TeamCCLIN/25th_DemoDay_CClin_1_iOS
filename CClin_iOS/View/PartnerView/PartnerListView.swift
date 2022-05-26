@@ -16,6 +16,9 @@ struct PartnerListView: View {
     @State var showDeadlineOrder: Bool = false
     @State var isMyPageViewActive: Bool = false
     @State var tabIndex = 0
+    
+    @ObservedObject var user = UserModel.shared
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -56,7 +59,11 @@ struct PartnerListView: View {
                         }
                         .background(
                             NavigationLink(isActive: $isMyPageViewActive, destination: {
-                                ClubMyPageView()
+                                if user.type == .club {
+                                    ClubMyPageView()
+                                } else {
+                                    CompanyMyPageView()
+                                }
                             }, label: {
                                 EmptyView()
                             })

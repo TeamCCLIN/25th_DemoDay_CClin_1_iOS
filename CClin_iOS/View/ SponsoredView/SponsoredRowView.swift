@@ -13,7 +13,7 @@ struct SponsoredRowView: View {
     @State var type: String = "협찬"
     @State var date: String = "04/26  12:10"
     @State var title: String = "기업 프로젝트 평가단 모집"
-    @State var description: String = "5월 15일에 100명 규모 행사에 커피 브랜드 협찬 해주실 기업 초청합니다니다니다니다"
+    @State var description: String = "5월 15일에 100명 규모 행사에 커피 브랜드 협찬 해주실 기업 초청합니다."
     @State var likeCnt: Int = 12
     @State var likeClicked: Bool = true
     

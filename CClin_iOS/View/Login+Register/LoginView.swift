@@ -12,7 +12,7 @@ struct LoginView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    let userModel = UserModel.shared
+    @ObservedObject var user = UserModel.shared
     
     @State var isActive : Bool = false
     @State var idInput: String = ""
@@ -59,16 +59,14 @@ struct LoginView: View {
                 
                 LargeButton(title: "로그인", backgroundColor: .main_club, foregroundColor: Color.white) {
                     
-//                    UserLoginManager.shared.doLogin(id: idInput, password: passwordInput)
-                    
                     if idInput == "99" && passwordInput == "99" {
-                        userModel.type = .company
+                        user.type = .company
                     }
                     else {
-                        userModel.type = .club
+                        user.type = .club
                     }
                     
-                    print(userModel.type.rawValue)
+                    print(user.type.rawValue)
                     
                     presentationMode.wrappedValue.dismiss()
                     
