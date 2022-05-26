@@ -76,6 +76,7 @@
 		74B6BCCD2838A34500168B31 /* HotProjectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6BCCC2838A34500168B31 /* HotProjectRowView.swift */; };
 		74B9148F283DF40A00F3668F /* ParticipatedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9148E283DF40A00F3668F /* ParticipatedRowView.swift */; };
 		74B91493283E070C00F3668F /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B91492283E070C00F3668F /* PopUpView.swift */; };
+		94C6902A283F364C00EE5A5A /* ClubDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C69029283F364C00EE5A5A /* ClubDetailView.swift */; };
 		ECFE46911D8E56447EF26F93 /* Pods_CClin_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9BD1C3073708F23F2D4FB2 /* Pods_CClin_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		74B6BCCC2838A34500168B31 /* HotProjectRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProjectRowView.swift; sourceTree = "<group>"; };
 		74B9148E283DF40A00F3668F /* ParticipatedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipatedRowView.swift; sourceTree = "<group>"; };
 		74B91492283E070C00F3668F /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		94C69029283F364C00EE5A5A /* ClubDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailView.swift; sourceTree = "<group>"; };
 		C10F2192C0D7BB381CBC878A /* Pods-CClin_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CClin_iOS.debug.xcconfig"; path = "Target Support Files/Pods-CClin_iOS/Pods-CClin_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 				00820E2A2838E82D005891D3 /* partnerAlliance.swift */,
 				009B696C283B78ED0062459C /* PartnerCompanyView.swift */,
 				009B696E283B78FB0062459C /* PartnerStudentView.swift */,
+				94C69029283F364C00EE5A5A /* ClubDetailView.swift */,
 			);
 			path = PartnerView;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				74B9148F283DF40A00F3668F /* ParticipatedRowView.swift in Sources */,
 				7451032E282E4FEE0022F444 /* LoginView.swift in Sources */,
 				74B91493283E070C00F3668F /* PopUpView.swift in Sources */,
+				94C6902A283F364C00EE5A5A /* ClubDetailView.swift in Sources */,
 				74AB016B2833F7B000996486 /* LoginResponse.swift in Sources */,
 				7457C499282E5158008E7CA5 /* ClubRegisterView1.swift in Sources */,
 				7482422B2838DC1D00BA2023 /* NotificationMyPostView.swift in Sources */,
