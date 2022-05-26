@@ -80,6 +80,7 @@
 		74B6BCCD2838A34500168B31 /* HotProjectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6BCCC2838A34500168B31 /* HotProjectRowView.swift */; };
 		74B9148F283DF40A00F3668F /* ParticipatedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9148E283DF40A00F3668F /* ParticipatedRowView.swift */; };
 		74B91493283E070C00F3668F /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B91492283E070C00F3668F /* PopUpView.swift */; };
+		9488310B283FA12B0093BBB5 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488310A283FA12B0093BBB5 /* ProjectDetailView.swift */; };
 		94C6902A283F364C00EE5A5A /* ClubDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C69029283F364C00EE5A5A /* ClubDetailView.swift */; };
 		94C6902E283F3F4F00EE5A5A /* CompanyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C6902D283F3F4F00EE5A5A /* CompanyDetailView.swift */; };
 		ECFE46911D8E56447EF26F93 /* Pods_CClin_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9BD1C3073708F23F2D4FB2 /* Pods_CClin_iOS.framework */; };
@@ -163,6 +164,7 @@
 		74B6BCCC2838A34500168B31 /* HotProjectRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProjectRowView.swift; sourceTree = "<group>"; };
 		74B9148E283DF40A00F3668F /* ParticipatedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipatedRowView.swift; sourceTree = "<group>"; };
 		74B91492283E070C00F3668F /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		9488310A283FA12B0093BBB5 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
 		94C69029283F364C00EE5A5A /* ClubDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailView.swift; sourceTree = "<group>"; };
 		94C6902D283F3F4F00EE5A5A /* CompanyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailView.swift; sourceTree = "<group>"; };
 		C10F2192C0D7BB381CBC878A /* Pods-CClin_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CClin_iOS.debug.xcconfig"; path = "Target Support Files/Pods-CClin_iOS/Pods-CClin_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			children = (
 				006148BE2838D85A00C48F2C /* projectAlliance.swift */,
 				00820E262838DD2C005891D3 /* ProjectFirstView.swift */,
+				9488310A283FA12B0093BBB5 /* ProjectDetailView.swift */,
 				7455982C283F750B00BE972E /* ProjectApplyView.swift */,
 				7455982E283F7E7500BE972E /* ApplyPopUpView.swift */,
 				74559830283F810600BE972E /* PostedApplyProjectView.swift */,
@@ -662,6 +665,7 @@
 				7400429D283DCD4C00E63A50 /* MyProjectView.swift in Sources */,
 				74B6BCC928389B2B00168B31 /* NewAlliance.swift in Sources */,
 				7482421A2838AF4000BA2023 /* HotCompanyRowView.swift in Sources */,
+				9488310B283FA12B0093BBB5 /* ProjectDetailView.swift in Sources */,
 				7457C49F282E6DE1008E7CA5 /* TermView.swift in Sources */,
 				00820E272838DD2C005891D3 /* ProjectFirstView.swift in Sources */,
 				74559831283F810600BE972E /* PostedApplyProjectView.swift in Sources */,
@@ -808,7 +812,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CClin_iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = WYMZZ4Z5Z5;
+				DEVELOPMENT_TEAM = 8RW838BTLH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CClin-iOS-Info.plist";
@@ -839,7 +843,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CClin_iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = WYMZZ4Z5Z5;
+				DEVELOPMENT_TEAM = 8RW838BTLH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CClin-iOS-Info.plist";
