@@ -57,3 +57,6 @@ struct ClubDetailView: View {
                     .padding(.horizontal, 33)
             }
             
+        }
+    }
+}
