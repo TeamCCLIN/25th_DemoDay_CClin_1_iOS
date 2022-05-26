@@ -18,6 +18,9 @@ struct SponsoredHomeView: View {
     @State var isSponsoredDetailViewActive: Bool = false
     @State var isPostingViewActive: Bool = false
     
+    let userModel = UserModel.shared
+    @State var userType: String = UserModel.shared.type.rawValue
+    
     @State var sponsoredArray: [SponsoredRowView] = [
         SponsoredRowView(writer: "학생단체", type: "홍보", date: "06/12  08:01", title: "대학생 단체도 돕고 우리 브랜드 홍보도 하고!", description: "총 인원 501명인 전국 디자인학과 재학생 단체에서 인쇄가 필요합니다", likeCnt: 11, likeClicked: true),
         SponsoredRowView(writer: "기업", type: "협찬", date: "07/21 01:01", title: "에너지 드링크 협찬합니다.", description: "러닝, 스포츠 관련 동아리에 에너지 드링크 20개입 3박스", likeCnt: 33, likeClicked: false),
@@ -195,7 +198,7 @@ struct SponsoredHomeView: View {
                     }
                     .background(
                         NavigationLink(isActive: $isMyPageViewActive, destination: {
-                            ClubMyPageView()
+                                ClubMyPageView()
                         }, label: {
                             EmptyView()
                         })

@@ -10,6 +10,11 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
+    let userModel = UserModel.shared
+    
+    @State var isActive : Bool = false
     @State var idInput: String = ""
     @State var passwordInput: String = ""
     
@@ -54,7 +59,19 @@ struct LoginView: View {
                 
                 LargeButton(title: "로그인", backgroundColor: .main_club, foregroundColor: Color.white) {
                     
-                    UserLoginManager.shared.doLogin(id: idInput, password: passwordInput)
+//                    UserLoginManager.shared.doLogin(id: idInput, password: passwordInput)
+                    
+                    if idInput == "99" && passwordInput == "99" {
+                        userModel.type = .company
+                    }
+                    else {
+                        userModel.type = .club
+                    }
+                    
+                    print(userModel.type.rawValue)
+                    
+                    presentationMode.wrappedValue.dismiss()
+                    
                 }
                 .frame(height: 55)
                 .padding(.bottom, 13)
@@ -74,12 +91,15 @@ struct LoginView: View {
                 }
                 .padding(.bottom, 16)
                 
-                NavigationLink(destination: SelectRegisterTypeView()) {
+                NavigationLink(
+                    destination: SelectRegisterTypeView(rootIsActive: $isActive),
+                isActive: $isActive) {
                     Text("처음 오셨나요?")
                         .font(.system(size: 10))
                         .foregroundColor(Color.gray_text)
                         .underline()
                 }
+                .isDetailLink(false)
             }
             .padding(.horizontal, 30)
         }

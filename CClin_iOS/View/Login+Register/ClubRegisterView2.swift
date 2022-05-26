@@ -11,6 +11,8 @@ struct ClubRegisterView2: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
+    @Binding var rootIsActive : Bool
+    
     let userModel = UserModel.shared
     
     @State var progressValue: Float = 0.3
@@ -44,6 +46,7 @@ struct ClubRegisterView2: View {
                     
                     ProgressBar(value: $progressValue).frame(height: 3)
                 }
+                .padding(.top, 15)
                 .padding(.bottom, 25)
                 
                 VStack {
@@ -253,28 +256,29 @@ struct ClubRegisterView2: View {
                     .disabled(!satisfiedCondition())
                     .background(
                         NavigationLink(isActive: $isApprovedViewActive, destination: {
-                            RegisterApprovedView()
+                            RegisterApprovedView(shouldPopToRootView: $rootIsActive)
                         }, label: {
                             EmptyView()
                         })
+                            .isDetailLink(false)
                     )
                     
                 }
                 
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarBackButtonHidden(true)
                 .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Image("logo+name")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 98, height: 23)
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            self.mode.wrappedValue.dismiss()
+                        } label: {
+                            Image(systemName: "chevron.backward")
+                                .foregroundColor(Color.black)
+                        }
+
                     }
                 }
-                .navigationBarBackButtonHidden(true)
-                .navigationBarItems(leading: Button(action : {
-                    self.mode.wrappedValue.dismiss()
-                }){
-                    Image(systemName: "chevron.backward")
-                })
+
             }
             .padding(.horizontal, 30)
         }
@@ -299,6 +303,6 @@ struct ClubRegisterView2: View {
 
 struct ClubRegisterView2_Previews: PreviewProvider {
     static var previews: some View {
-        ClubRegisterView2(selectedCategory: .cook)
+        ClubRegisterView2(rootIsActive: .constant(false), selectedCategory: .cook)
     }
 }

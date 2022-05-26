@@ -18,6 +18,8 @@ struct ClubRegisterView1: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
+    @Binding var rootIsActive : Bool
+    
     let userModel = UserModel.shared
     
     @State var progressValue: Float = 0.0
@@ -45,6 +47,7 @@ struct ClubRegisterView1: View {
                     
                     ProgressBar(value: $progressValue).frame(height: 3)
                 }
+                .padding(.top, 15)
                 .padding(.bottom, 25)
                 
                 VStack {
@@ -219,31 +222,33 @@ struct ClubRegisterView1: View {
                     userModel.id = idInput
                     userModel.name = clubNameInput
                     userModel.password = passwordInput
-                }
+                                    }
                 .frame(width: 329, height: 55, alignment: .center)
                 .disabled(!satisfiedCondition())
                 .background(
                     NavigationLink(isActive: $isClubRegisterView2Active, destination: {
-                        ClubRegisterView2()
+                        ClubRegisterView2(rootIsActive: $rootIsActive)
                     }, label: {
                         EmptyView()
                     })
+                        .isDetailLink(false)
                 )
                 
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Image("logo+name")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 98, height: 23)
-                    }
-                }
+                
+                .navigationBarTitleDisplayMode(.inline)
                 .navigationBarBackButtonHidden(true)
-                .navigationBarItems(leading: Button(action : {
-                    self.mode.wrappedValue.dismiss()
-                }){
-                    Image(systemName: "chevron.backward")
-                })
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            self.mode.wrappedValue.dismiss()
+                        } label: {
+                            Image(systemName: "chevron.backward")
+                                .foregroundColor(Color.black)
+                        }
+                    }
+                            
+                               
+                }
             }
             .padding(.horizontal, 30)
         }
@@ -268,6 +273,6 @@ struct ClubRegisterView1: View {
 
 struct ClubRegisterView1_Previews: PreviewProvider {
     static var previews: some View {
-        ClubRegisterView1()
+        ClubRegisterView1(rootIsActive: .constant(false))
     }
 }

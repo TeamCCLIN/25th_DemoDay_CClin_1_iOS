@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RegisterApprovedView: View {
+    
+    @Binding var shouldPopToRootView : Bool
+    
     var body: some View {
         VStack {
             Image("party")
@@ -51,11 +54,21 @@ struct RegisterApprovedView: View {
         }
         .padding(.horizontal, 31)
         .navigationBarHidden(true)
+        .onAppear {
+            delayText()
+        }
     }
+    
+    private func delayText() {
+            // Delay of 5 seconds
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                shouldPopToRootView = false
+            }
+}
 }
 
 struct RegisterApprovedView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterApprovedView()
+        RegisterApprovedView(shouldPopToRootView:.constant(true))
     }
 }
