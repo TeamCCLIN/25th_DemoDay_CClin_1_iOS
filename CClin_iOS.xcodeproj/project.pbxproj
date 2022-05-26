@@ -76,6 +76,9 @@
 		74B6BCCD2838A34500168B31 /* HotProjectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6BCCC2838A34500168B31 /* HotProjectRowView.swift */; };
 		74B9148F283DF40A00F3668F /* ParticipatedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9148E283DF40A00F3668F /* ParticipatedRowView.swift */; };
 		74B91493283E070C00F3668F /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B91492283E070C00F3668F /* PopUpView.swift */; };
+		94C6902A283F364C00EE5A5A /* ClubDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C69029283F364C00EE5A5A /* ClubDetailView.swift */; };
+		94C6902C283F3DBF00EE5A5A /* ProjectApply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C6902B283F3DBF00EE5A5A /* ProjectApply.swift */; };
+		94C6902E283F3F4F00EE5A5A /* CompanyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C6902D283F3F4F00EE5A5A /* CompanyDetailView.swift */; };
 		ECFE46911D8E56447EF26F93 /* Pods_CClin_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9BD1C3073708F23F2D4FB2 /* Pods_CClin_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +156,9 @@
 		74B6BCCC2838A34500168B31 /* HotProjectRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProjectRowView.swift; sourceTree = "<group>"; };
 		74B9148E283DF40A00F3668F /* ParticipatedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipatedRowView.swift; sourceTree = "<group>"; };
 		74B91492283E070C00F3668F /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		94C69029283F364C00EE5A5A /* ClubDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailView.swift; sourceTree = "<group>"; };
+		94C6902B283F3DBF00EE5A5A /* ProjectApply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectApply.swift; sourceTree = "<group>"; };
+		94C6902D283F3F4F00EE5A5A /* CompanyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailView.swift; sourceTree = "<group>"; };
 		C10F2192C0D7BB381CBC878A /* Pods-CClin_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CClin_iOS.debug.xcconfig"; path = "Target Support Files/Pods-CClin_iOS/Pods-CClin_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +179,7 @@
 			children = (
 				006148BE2838D85A00C48F2C /* projectAlliance.swift */,
 				00820E262838DD2C005891D3 /* ProjectFirstView.swift */,
+				94C6902B283F3DBF00EE5A5A /* ProjectApply.swift */,
 			);
 			path = ProjectView;
 			sourceTree = "<group>";
@@ -184,6 +191,8 @@
 				00820E2A2838E82D005891D3 /* partnerAlliance.swift */,
 				009B696C283B78ED0062459C /* PartnerCompanyView.swift */,
 				009B696E283B78FB0062459C /* PartnerStudentView.swift */,
+				94C69029283F364C00EE5A5A /* ClubDetailView.swift */,
+				94C6902D283F3F4F00EE5A5A /* CompanyDetailView.swift */,
 			);
 			path = PartnerView;
 			sourceTree = "<group>";
@@ -593,17 +602,20 @@
 				74793E332833313D008CE9F3 /* SponsoredHomeView.swift in Sources */,
 				74AB01692833F3CB00996486 /* UserLoginManager.swift in Sources */,
 				74B6BCBD2837A50200168B31 /* Font+SpoqaHanSansNeo.swift in Sources */,
+				94C6902C283F3DBF00EE5A5A /* ProjectApply.swift in Sources */,
 				74697A97283BEF5F00F9FA13 /* keepPartnerRowView.swift in Sources */,
 				748242292838D0FE00BA2023 /* NotificationRowView.swift in Sources */,
 				74548E76283B6E6900F3802A /* SponsoredFrontRowView.swift in Sources */,
 				74B9148F283DF40A00F3668F /* ParticipatedRowView.swift in Sources */,
 				7451032E282E4FEE0022F444 /* LoginView.swift in Sources */,
 				74B91493283E070C00F3668F /* PopUpView.swift in Sources */,
+				94C6902A283F364C00EE5A5A /* ClubDetailView.swift in Sources */,
 				74AB016B2833F7B000996486 /* LoginResponse.swift in Sources */,
 				7457C499282E5158008E7CA5 /* ClubRegisterView1.swift in Sources */,
 				7482422B2838DC1D00BA2023 /* NotificationMyPostView.swift in Sources */,
 				74AB01612833F0F000996486 /* Repositories.swift in Sources */,
 				74697A9B283BF21900F9FA13 /* KeepSponsoredView.swift in Sources */,
+				94C6902E283F3F4F00EE5A5A /* CompanyDetailView.swift in Sources */,
 				00820E2B2838E82D005891D3 /* partnerAlliance.swift in Sources */,
 				74793E30283296C6008CE9F3 /* RegisterApprovedView.swift in Sources */,
 				74AB01672833F1C400996486 /* RegisterResponse.swift in Sources */,
