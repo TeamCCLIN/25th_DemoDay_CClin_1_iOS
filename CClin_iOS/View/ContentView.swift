@@ -30,6 +30,7 @@ struct ContentView: View {
                     .tag(SelectedTab.partner)
                 
                 ProjectFirstView()
+                //ProjectDetailView()
                     .tabItem {
                         Image(selectedTab == .project ? "ic_project_accent" : "ic_project")
                         Text("프로젝트")

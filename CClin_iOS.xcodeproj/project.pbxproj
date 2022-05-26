@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		006148BD2838CE8900C48F2C /* PartnerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006148BC2838CE8900C48F2C /* PartnerListView.swift */; };
 		006148BF2838D85A00C48F2C /* projectAlliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006148BE2838D85A00C48F2C /* projectAlliance.swift */; };
+		0073286A283F569B00CA16E5 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00732869283F569B00CA16E5 /* ProjectDetailView.swift */; };
 		00820E272838DD2C005891D3 /* ProjectFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00820E262838DD2C005891D3 /* ProjectFirstView.swift */; };
 		00820E2B2838E82D005891D3 /* partnerAlliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00820E2A2838E82D005891D3 /* partnerAlliance.swift */; };
 		009B696D283B78ED0062459C /* PartnerCompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B696C283B78ED0062459C /* PartnerCompanyView.swift */; };
@@ -88,6 +89,7 @@
 /* Begin PBXFileReference section */
 		006148BC2838CE8900C48F2C /* PartnerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerListView.swift; sourceTree = "<group>"; };
 		006148BE2838D85A00C48F2C /* projectAlliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectAlliance.swift; sourceTree = "<group>"; };
+		00732869283F569B00CA16E5 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
 		00820E262838DD2C005891D3 /* ProjectFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFirstView.swift; sourceTree = "<group>"; };
 		00820E2A2838E82D005891D3 /* partnerAlliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = partnerAlliance.swift; sourceTree = "<group>"; };
 		009B696C283B78ED0062459C /* PartnerCompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerCompanyView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,8 @@
 			children = (
 				006148BE2838D85A00C48F2C /* projectAlliance.swift */,
 				00820E262838DD2C005891D3 /* ProjectFirstView.swift */,
+				94C6902B283F3DBF00EE5A5A /* ProjectApply.swift */,
+				00732869283F569B00CA16E5 /* ProjectDetailView.swift */,
 				7455982C283F750B00BE972E /* ProjectApplyView.swift */,
 				7455982E283F7E7500BE972E /* ApplyPopUpView.swift */,
 				74559830283F810600BE972E /* PostedApplyProjectView.swift */,
@@ -614,6 +618,7 @@
 				7400429F283DCF1A00E63A50 /* ProjectWaitingView.swift in Sources */,
 				009B696F283B78FB0062459C /* PartnerStudentView.swift in Sources */,
 				009B696D283B78ED0062459C /* PartnerCompanyView.swift in Sources */,
+				0073286A283F569B00CA16E5 /* ProjectDetailView.swift in Sources */,
 				7451032B282C0A7A0022F444 /* SelectedTab.swift in Sources */,
 				7457C4A6282EBBBB008E7CA5 /* SelectedArea.swift in Sources */,
 				74793E332833313D008CE9F3 /* SponsoredHomeView.swift in Sources */,
