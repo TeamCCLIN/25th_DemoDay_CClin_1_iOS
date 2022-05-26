@@ -11,6 +11,7 @@ class UserModel {
     
     static let shared = UserModel()
     
+    var type: LoginType = .club
     var name: String?
     var id: String?
     var password: String?
@@ -21,4 +22,9 @@ class UserModel {
     var clubUrl: String?
     
     private init() { }
+}
+
+enum LoginType: String {
+    case company = "기업"
+    case club = "학생단체"
 }

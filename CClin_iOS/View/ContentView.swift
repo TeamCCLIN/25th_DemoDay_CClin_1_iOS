@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var showLoginView:Bool = true
     @State var selectedTab: SelectedTab = .home
     
     var body: some View {
+        ZStack {
             TabView(selection: $selectedTab) {
                 ClubHomeView()
                     .tabItem {
@@ -43,6 +45,13 @@ struct ContentView: View {
                 
             }
             .accentColor(Color(hex: "F27953"))
+            .onAppear {
+                showLoginView = true
+            }
+        }
+        .fullScreenCover(isPresented: $showLoginView) {
+            LoginView()
+        }
     }
 }
     

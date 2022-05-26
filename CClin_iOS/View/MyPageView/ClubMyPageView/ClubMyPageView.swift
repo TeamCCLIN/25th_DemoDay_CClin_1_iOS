@@ -11,6 +11,8 @@ struct ClubMyPageView: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
+    @State var showLoginView:Bool = false
+    
     var body: some View {
         VStack() {
             ZStack
@@ -168,7 +170,7 @@ struct ClubMyPageView: View {
                 .frame(height:31)
             
             Button {
-                //
+                showLoginView = true
             } label: {
                 Text("로그아웃")
                     .font(SpoqaHanSansNeo.medium(size: 11))
@@ -214,6 +216,9 @@ struct ClubMyPageView: View {
                 }
                 
             }
+        }
+        .fullScreenCover(isPresented: $showLoginView) {
+            LoginView()
         }
     }
 }

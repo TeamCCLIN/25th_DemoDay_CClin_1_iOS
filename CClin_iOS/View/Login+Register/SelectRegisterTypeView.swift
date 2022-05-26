@@ -11,6 +11,8 @@ struct SelectRegisterTypeView: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
+    @Binding var rootIsActive : Bool
+    
     @State var isClubRegisterView1Active: Bool = false
     
     var body: some View {
@@ -38,10 +40,11 @@ struct SelectRegisterTypeView: View {
             .frame(height: 55)
             .background(
                 NavigationLink(isActive: $isClubRegisterView1Active, destination: {
-                    ClubRegisterView1()
+                    ClubRegisterView1(rootIsActive: $rootIsActive)
                 }, label: {
                     EmptyView()
                 })
+                    .isDetailLink(false)
             )
             .padding(.bottom, 11)
             
@@ -55,6 +58,7 @@ struct SelectRegisterTypeView: View {
             self.mode.wrappedValue.dismiss()
         }){
             Image(systemName: "chevron.backward")
+                .foregroundColor(Color.black)
         })
         
     }
@@ -62,6 +66,6 @@ struct SelectRegisterTypeView: View {
 
 struct SelectRegisterTypeView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectRegisterTypeView()
+        SelectRegisterTypeView(rootIsActive: .constant(false))
     }
 }

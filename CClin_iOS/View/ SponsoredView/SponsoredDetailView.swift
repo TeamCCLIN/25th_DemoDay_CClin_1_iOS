@@ -154,6 +154,7 @@ struct SponsoredDetailView: View {
                     }, label: {
                         EmptyView()
                     })
+                    
                 )
             }
         }

@@ -19,13 +19,14 @@ struct TermView: View {
                         .edgesIgnoringSafeArea(.all)
             ScrollView() {
                 VStack {
-                    ForEach(1..<100) { i in
-                        HStack {
-                            Text("약관 \(i)")
-                            Spacer()
-                        }
+                    HStack {
+                    Text("(필수) 서비스 이용 약관")
+                        .font(SpoqaHanSansNeo.regular(size: 10))
+                        
+                        Spacer()
                     }
                 }
+                .padding()
             }
         }
     }

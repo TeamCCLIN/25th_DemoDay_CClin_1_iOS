@@ -124,8 +124,8 @@ struct CompanyMyPageView: View {
                         EmptyView()
                     })
                 )
-
-               
+                
+                
             }
             .padding(.bottom, 23)
             
@@ -134,10 +134,18 @@ struct CompanyMyPageView: View {
                     Button {
                         isKeepViewActive = true
                     } label: {
-                        Text("찜한 목록")
-                            .foregroundColor(Color.black)
-                            .font(SpoqaHanSansNeo.medium(size: 15))
+                        HStack {
+                            Text("찜한 목록")
+                                .foregroundColor(Color.black)
+                                .font(SpoqaHanSansNeo.medium(size: 15))
+                            
+                            Spacer()
+                        }
                     }
+                    .padding()
+                    .frame(height:55)
+                    .background(Color.gray_bottom)
+                    .cornerRadius(7)
                     .background(
                         NavigationLink(isActive: $isKeepViewActive, destination: {
                             KeepView()
@@ -145,45 +153,47 @@ struct CompanyMyPageView: View {
                             EmptyView()
                         })
                     )
-                    
-                    Spacer()
                 }
-                .padding()
-                .frame(height:55)
-                .background(Color.gray_bottom)
-                .cornerRadius(7)
                 
                 HStack {
                     Button {
                         //
                     } label: {
-                        Text("문의사항")
-                            .foregroundColor(Color.black)
-                            .font(SpoqaHanSansNeo.medium(size: 15))
+                        HStack {
+                            Text("문의사항")
+                                .foregroundColor(Color.black)
+                                .font(SpoqaHanSansNeo.medium(size: 15))
+                            
+                            Spacer()
+                        }
                     }
-                    
-                    Spacer()
+                    .padding()
+                    .frame(height:55)
+                    .background(Color.gray_bottom)
+                    .cornerRadius(7)
                 }
-                .padding()
-                .frame(height:55)
-                .background(Color.gray_bottom)
-                .cornerRadius(7)
+                
                 
                 HStack {
                     Button {
                         //
                     } label: {
-                        Text("개인정보 처리방침")
-                            .foregroundColor(Color.black)
-                            .font(SpoqaHanSansNeo.medium(size: 15))
+                        HStack {
+                            Text("개인정보 처리방침")
+                                .foregroundColor(Color.black)
+                                .font(SpoqaHanSansNeo.medium(size: 15))
+                            
+                            Spacer()
+                        }
                     }
+                    .padding()
+                    .frame(height:55)
+                    .background(Color.gray_bottom)
+                    .cornerRadius(7)
                     
-                    Spacer()
+                    
                 }
-                .padding()
-                .frame(height:55)
-                .background(Color.gray_bottom)
-                .cornerRadius(7)
+                
             }
             
             Spacer()
