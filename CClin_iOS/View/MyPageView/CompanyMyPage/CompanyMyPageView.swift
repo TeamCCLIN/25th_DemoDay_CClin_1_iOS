@@ -14,6 +14,7 @@ struct CompanyMyPageView: View {
     @State var isNotificationViewActive: Bool = false
     @State var isKeepViewActive: Bool = false
     @State var isMyProjectViewActive: Bool = false
+    @State var showLoginView:Bool = false
     
     var body: some View {
         VStack() {
@@ -200,7 +201,7 @@ struct CompanyMyPageView: View {
                 .frame(height:31)
             
             Button {
-                //
+                showLoginView = true
             } label: {
                 Text("로그아웃")
                     .font(SpoqaHanSansNeo.medium(size: 11))
@@ -253,8 +254,12 @@ struct CompanyMyPageView: View {
                 
             }
         }
+        .fullScreenCover(isPresented: $showLoginView) {
+            LoginView()
+        }
     }
-}
+    }
+
 
 struct CompanyMyPageView_Previews: PreviewProvider {
     static var previews: some View {

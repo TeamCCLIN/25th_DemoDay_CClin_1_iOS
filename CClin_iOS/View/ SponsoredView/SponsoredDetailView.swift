@@ -14,9 +14,10 @@ struct SponsoredDetailView: View {
     
     @State var isMyPageViewActive: Bool = false
     @State var inputComment: String = ""
-    
-    
+        
     @State var commentArray: [Comment] = [Comment(image: "logo_readyme", name: "레디미", date: "05/18  07:12", description:  "자세한 프로젝트 진행 일정 및 평가 심사항목이 무엇인가요?")]
+    
+    @ObservedObject var user = UserModel.shared
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -150,7 +151,11 @@ struct SponsoredDetailView: View {
                 }
                 .background(
                     NavigationLink(isActive: $isMyPageViewActive, destination: {
-                        ClubMyPageView()
+                        if user.type == .club {
+                            ClubMyPageView()
+                        } else {
+                            CompanyMyPageView()
+                        }
                     }, label: {
                         EmptyView()
                     })

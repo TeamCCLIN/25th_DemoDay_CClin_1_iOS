@@ -38,6 +38,9 @@ struct ClubHomeView: View {
     ]
     
     @State var isMyPageViewActive: Bool = false
+    
+    @ObservedObject var user = UserModel.shared
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -132,8 +135,11 @@ struct ClubHomeView: View {
                             }
                             .background(
                                 NavigationLink(isActive: $isMyPageViewActive, destination: {
-                                    CompanyMyPageView()
-//                                    ClubMyPageView()
+                                    if user.type == .club {
+                                        ClubMyPageView()
+                                    } else {
+                                        CompanyMyPageView()
+                                    }
                                 }, label: {
                                     EmptyView()
                                 })

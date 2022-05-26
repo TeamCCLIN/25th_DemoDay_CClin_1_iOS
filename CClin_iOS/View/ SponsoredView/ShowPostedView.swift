@@ -18,6 +18,8 @@ struct ShowPostedView: View {
     @State var isMyPageViewActive: Bool = false
     @State var inputComment: String = ""
     
+    @ObservedObject var user = UserModel.shared
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             ScrollView {
@@ -133,7 +135,11 @@ struct ShowPostedView: View {
                 }
                 .background(
                     NavigationLink(isActive: $isMyPageViewActive, destination: {
-                        ClubMyPageView()
+                        if user.type == .club {
+                            ClubMyPageView()
+                        } else {
+                            CompanyMyPageView()
+                        }
                     }, label: {
                         EmptyView()
                     })

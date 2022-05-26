@@ -7,21 +7,21 @@
 
 import SwiftUI
 
-class UserModel {
+class UserModel:ObservableObject {
     
     static let shared = UserModel()
     
-    var type: LoginType = .club
-    var name: String?
-    var id: String?
-    var password: String?
-    var description: String?
-    var category: SelectedCategory?
-    var foundYear: Int?
-    var area: String?
-    var clubUrl: String?
+    @Published var type: LoginType = .club
+    @Published var name: String?
+    @Published var id: String?
+    @Published var password: String?
+    @Published var description: String?
+    @Published var category: SelectedCategory?
+    @Published var foundYear: Int?
+    @Published var area: String?
+    @Published var clubUrl: String?
     
-    private init() { }
+//    private init() { }
 }
 
 enum LoginType: String {

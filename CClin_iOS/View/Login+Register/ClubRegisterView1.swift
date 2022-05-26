@@ -20,8 +20,6 @@ struct ClubRegisterView1: View {
     
     @Binding var rootIsActive : Bool
     
-    let userModel = UserModel.shared
-    
     @State var progressValue: Float = 0.0
     @State var clubNameInput: String = ""
     @State var idInput: String = ""
@@ -216,13 +214,8 @@ struct ClubRegisterView1: View {
                 .padding(.bottom, 15)
                 
                 LargeButton(title: "다음으로", backgroundColor: satisfiedCondition() ? Color.main_club : Color.gray_bottom, foregroundColor: satisfiedCondition() ? Color.white : Color.gray_bottom_text) {
-                    
                     isClubRegisterView2Active = true
-                    
-                    userModel.id = idInput
-                    userModel.name = clubNameInput
-                    userModel.password = passwordInput
-                                    }
+                }
                 .frame(width: 329, height: 55, alignment: .center)
                 .disabled(!satisfiedCondition())
                 .background(
@@ -233,7 +226,6 @@ struct ClubRegisterView1: View {
                     })
                         .isDetailLink(false)
                 )
-                
                 
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarBackButtonHidden(true)
@@ -246,8 +238,8 @@ struct ClubRegisterView1: View {
                                 .foregroundColor(Color.black)
                         }
                     }
-                            
-                               
+                    
+                    
                 }
             }
             .padding(.horizontal, 30)
@@ -266,8 +258,8 @@ struct ClubRegisterView1: View {
     
     func startProgressBar() {
         for _ in 0...20 {
-                    self.progressValue += 0.015
-                }
+            self.progressValue += 0.015
+        }
     }
 }
 
