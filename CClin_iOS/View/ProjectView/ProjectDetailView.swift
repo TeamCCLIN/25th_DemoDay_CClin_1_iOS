@@ -77,6 +77,7 @@ struct ProjectDetailView: View {
                                     } label: {
                                         Image(systemName: "person.crop.circle")
                                             .padding(.trailing, 15)
+                                            .ignoresSafeArea()
                                         
                                     }
                                     .background(
