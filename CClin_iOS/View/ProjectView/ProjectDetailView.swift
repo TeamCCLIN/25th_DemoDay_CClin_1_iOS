@@ -18,7 +18,6 @@ struct ProjectDetailView: View {
         ScrollView() {
             ZStack {
                 Image("background_project")
-            
                 ZStack(alignment: .bottom) {
                     ScrollView {
                         VStack {
