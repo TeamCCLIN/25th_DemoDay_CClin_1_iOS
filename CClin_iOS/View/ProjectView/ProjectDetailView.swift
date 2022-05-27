@@ -6,6 +6,7 @@
 //
 
 
+
 import SwiftUI
 
 struct ProjectDetailView: View {
@@ -18,7 +19,6 @@ struct ProjectDetailView: View {
         ScrollView() {
             ZStack {
                 Image("background_project")
-            
                 ZStack(alignment: .bottom) {
                     ScrollView {
                         VStack {
@@ -337,3 +337,4 @@ struct ProjectDetailView_Previews: PreviewProvider {
         ProjectDetailView()
     }
 }
+
