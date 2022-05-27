@@ -17,14 +17,14 @@ struct PostedApplyProjectView: View {
         ScrollView{
             VStack {
                 HStack {
-                    Image("logo_kusitms")
+                    Image("logo_1q")
                         .resizable()
                         .frame(width: 84, height: 84)
                         .cornerRadius(5)
                     
                     VStack(spacing: 8) {
                         HStack {
-                            Text("# IT • 기술  |  회원 619명")
+                            Text("# IT • 기술  |  회원 45명")
                                 .foregroundColor(Color.main_club)
                                 .font(SpoqaHanSansNeo.bold(size: 11))
                             
@@ -36,7 +36,7 @@ struct PostedApplyProjectView: View {
                         }
                         
                         HStack {
-                            Text("한국대학생IT경영학회")
+                            Text("원큐")
                             
                             Spacer()
                             
@@ -50,7 +50,7 @@ struct PostedApplyProjectView: View {
                         .font(SpoqaHanSansNeo.bold(size: 15))
                         
                         HStack {
-                            Text("기획자, 개발자, 디자이너가 모여 하나의 가치를 창조하는 IT 서비스 학회, 큐시즘")
+                            Text("서비스 끌린을 만드는 팀, 원큐입니다.")
                                 .foregroundColor(Color.gray_text)
                                 .font(SpoqaHanSansNeo.medium(size: 11))
                             

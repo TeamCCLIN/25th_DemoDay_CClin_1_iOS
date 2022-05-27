@@ -25,7 +25,7 @@ struct SponsoredDetailView: View {
                 VStack {
                     VStack {
                         HStack {
-                            Image("logo_kusitsm")
+                            Image("logo_kusitms")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 46)
@@ -107,7 +107,7 @@ struct SponsoredDetailView: View {
                             let hour = calendar.component(.hour, from: date)
                             let minutes = calendar.component(.minute, from: date)
                             
-                            let commentNow = Comment(image: "logo_kusitsm", name: "한국대학생IT경영학회", date: "05/28 \(hour):\(minutes)", description: inputComment)
+                            let commentNow = Comment(image: "logo_1q", name: "원큐", date: "05/28 \(hour):\(minutes)", description: inputComment)
                             
                             commentArray.append(commentNow)
                             

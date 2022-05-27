@@ -132,7 +132,7 @@ struct ClubDetailView: View {
                         //
                     } label: {
                         Image(systemName: "heart.fill")
-                            .foregroundColor(Color.main_club)
+                            .foregroundColor(Color(hex: "BBBBBB"))
                     }
                     Button {
                         //

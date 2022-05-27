@@ -14,7 +14,7 @@ struct ClubMyPageView: View {
     @State var showLoginView:Bool = false
     
     var body: some View {
-        VStack() {
+        VStack {
             ZStack
             {
                 Image("background_1q")
