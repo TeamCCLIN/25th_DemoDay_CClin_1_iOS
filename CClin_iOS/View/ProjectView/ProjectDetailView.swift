@@ -98,6 +98,7 @@ struct ProjectDetailView: View {
                 
             }
             
+            
             VStack {
                 
                 HStack {

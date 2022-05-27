@@ -187,7 +187,6 @@
 			children = (
 				006148BE2838D85A00C48F2C /* projectAlliance.swift */,
 				00820E262838DD2C005891D3 /* ProjectFirstView.swift */,
-				94C6902B283F3DBF00EE5A5A /* ProjectApply.swift */,
 				00732869283F569B00CA16E5 /* ProjectDetailView.swift */,
 				7455982C283F750B00BE972E /* ProjectApplyView.swift */,
 				7455982E283F7E7500BE972E /* ApplyPopUpView.swift */,
@@ -813,7 +812,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CClin_iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = WYMZZ4Z5Z5;
+				DEVELOPMENT_TEAM = 8RW838BTLH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CClin-iOS-Info.plist";
@@ -844,7 +843,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CClin_iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = WYMZZ4Z5Z5;
+				DEVELOPMENT_TEAM = 8RW838BTLH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CClin-iOS-Info.plist";

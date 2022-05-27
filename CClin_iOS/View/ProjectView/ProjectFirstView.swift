@@ -149,9 +149,6 @@ struct ProjectFirstView: View {
                                 })
                             )}
                         
-                        
-                        
-                        
                         projectAlliance(imgaeUrl: "project_2", category: "#인재 채용 #아이디어 공모 #UI/UX", title: "다수의 이동체 관제 모니터링 화면 UI/UX 최적화 방안 공모", companyName: "(주)파블로항공")
                         //.padding(.bottom, 10)
                             .cornerRadius(7)
