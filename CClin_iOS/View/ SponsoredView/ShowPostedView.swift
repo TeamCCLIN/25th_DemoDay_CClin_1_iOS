@@ -26,7 +26,7 @@ struct ShowPostedView: View {
                 VStack {
                     VStack {
                         HStack {
-                            Image("logo_kusitsm")
+                            Image("logo_1q")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 46)
@@ -34,7 +34,7 @@ struct ShowPostedView: View {
                                 .padding(.trailing, 11)
                             
                             VStack(alignment: .leading) {
-                                Text("한국대학생IT경영학회")
+                                Text("원큐")
                                     .font(SpoqaHanSansNeo.bold(size: 13))
                                     .padding(.bottom, 3)
                                 

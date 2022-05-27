@@ -7,12 +7,20 @@
 
 import SwiftUI
 
-struct projectAlliance: View {
+struct ProjectRow: Hashable {
+    var imgaeUrl: String = ""
+    var category: String = ""
+    var title: String = ""
+    var companyName: String = ""
+}
+
+struct ProjectRowView: View {
     
     @State var imgaeUrl: String = "hot_alliance"
     @State var category: String = "category"
     @State var title: String = "title"
     @State var companyName: String = "name"
+    
     var body: some View {
         VStack {
             HStack {
@@ -57,11 +65,13 @@ struct projectAlliance: View {
                 .frame(height:1)
                 .foregroundColor(Color.gray_button_line)
         }
+        .padding(.bottom, 15)
+        .padding(.horizontal, 30)
     }
 }
 
-struct projectAlliance_Previews: PreviewProvider {
+struct ProjectRowView_Previews: PreviewProvider {
     static var previews: some View {
-        projectAlliance()
+        ProjectRowView()
     }
 }

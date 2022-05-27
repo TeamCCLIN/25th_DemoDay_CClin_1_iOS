@@ -250,7 +250,7 @@ struct ClubRegisterView1: View {
     }
     
     func satisfiedCondition() -> Bool {
-        if clubNameInput == "" || idInput == "" ||  passwordInput == "" || passwordInput != checkPasswordInput || !term1 || !term2 {
+        if !isAvailableId || clubNameInput == "" || idInput == "" ||  passwordInput == "" || passwordInput != checkPasswordInput || !term1 || !term2 {
             return false
         }
         return true

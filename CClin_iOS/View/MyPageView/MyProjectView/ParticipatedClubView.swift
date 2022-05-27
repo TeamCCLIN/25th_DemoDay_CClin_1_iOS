@@ -12,8 +12,8 @@ struct ParticipatedClubView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     @State var applicateClubList: [ApplicateClub] = [
-        ApplicateClub(name: "한국대학생IT경영학회",category: "IT·기술", date: "05/02 12:10", isSelected: false),
-        ApplicateClub(name: "원큐",category: "IT·기술", date: "05/10 01:12", isSelected: false),
+        ApplicateClub(name: "원큐",category: "IT·기술", date: "05/02 12:10", isSelected: false),
+        ApplicateClub(name: "한국대학생IT경영학회",category: "IT·기술", date: "05/10 01:12", isSelected: false),
         ApplicateClub(name: "Hey",category: "경영·마케팅·컨설팅", date: "05/19  21:29", isSelected: false),
         ApplicateClub(name: "원더풀",category: "IT·기술", date: "05/19  22:34", isSelected: false)
     ]
