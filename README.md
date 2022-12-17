@@ -1,4 +1,4 @@
-# 25th_DemoDay_CClin_1_iOS_new# 25th_DemoDay_CClin_1_iOS
+# 25th_DemoDay_CClin_1_iOS_new
 
 ## 학생 단체 - 기업 연결 플랫폼 ‘CClin’
 
