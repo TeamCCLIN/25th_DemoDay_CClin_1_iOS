@@ -6,8 +6,6 @@
 
 `2022.03 ~ 2022.05`
 
-![끌린2.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2e6206fd-f2a4-4402-98bd-5e876b73a5cc/%EB%81%8C%EB%A6%B02.png)
-
 
 ### 아이템포스터
 
